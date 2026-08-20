@@ -1,0 +1,24 @@
+node_modules
+package-lock.json
+.DS_Store
+*.psd
+public/
+
+# Private runtime & session files (Core Rule 3)
+sessions.json
+conversations.json
+*.log
+*.jsonl
+.env
+.env.*
+coverage.xml
+.vscode/
+.idea/
+
+# Agentic tooling & skills
+.agents/
+skills/
+skills-lock.json
+
+# Reference clones
+secret/
