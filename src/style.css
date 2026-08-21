@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.jitter {
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: jittery;
+    z-index: -10;
+}
+
+.interface-wrapper {
+    width: 100%;
+    top: 64px;
+    left: 64px;
+}
+
+.icon-control-container {
+    height: 26.5px;
+    width: 26.5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .interface-wrapper {
+        width: 100%;
+        top: 24px;
+        left: 24px;
+    }
+
+    .icon-control-container {
+        height: 19.5px;
+        width: 19.5px;
+    }
+}
+
+@keyframes jittery {
+    10% {
+        transform: translate(-0.1px, -0.15px) scale(1, 1);
+    }
+
+    20% {
+        transform: translate(0.15px, 0.1px) scale(1, 1);
+    }
+
+    30% {
+        transform: translate(-0.2px, -0.25px) scale(1, 1);
+    }
+
+    40% {
+        transform: translate(0.05px, 0.1px) scale(1, 1);
+    }
+
+    50% {
+        transform: translate(-0.025px, -0.05px) scale(1, 1);
+    }
+
+    60% {
+        transform: translate(0px, 0.075px) scale(1, 1);
+    }
+
+    70% {
+        transform: translate(-0.075px, -0.1px) scale(1, 1);
+    }
+
+    80% {
+        transform: translate(0.075px, 0.125px) scale(1, 1);
+    }
+
+    90% {
+        transform: translate(-0.125px, -0.075px) scale(1, 1);
+    }
+
+    100% {
+        transform: translate(0.075px, 0.025px) scale(1, 1);
+    }
+}
+
+/* Desk Objects Interactive Speech Bubble */
+#desk-dialog-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.retro-desk-bubble {
+    position: absolute;
+    width: 230px;
+    max-width: calc(100vw - 32px);
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.45), inset 1px 1px 0px #ffffff;
+    font-family: 'Segoe UI', 'MS Sans Serif', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    pointer-events: auto;
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+    transition: opacity 0.22s ease-out, transform 0.22s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    display: none;
+    user-select: none;
+}
+
+.retro-desk-bubble.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    display: block;
+}
+
+.retro-desk-bubble .bubble-header {
+    background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+    color: #ffffff;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+}
+
+.retro-desk-bubble .bubble-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.retro-desk-bubble .bubble-icon {
+    font-size: 12px;
+}
+
+.retro-desk-bubble .bubble-close-btn {
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+    color: #000000;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 1;
+    width: 15px;
+    height: 14px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.retro-desk-bubble .bubble-close-btn:active {
+    border-color: #404040 #ffffff #ffffff #404040;
+    padding-top: 1px;
+    padding-left: 1px;
+}
+
+.retro-desk-bubble .bubble-body {
+    padding: 6px 9px 8px 9px;
+    font-size: 11.5px;
+    line-height: 1.4;
+    color: #111111;
+    background: #c0c0c0;
+}
+
+.retro-desk-bubble .bubble-text {
+    margin: 0;
+}
+
+.retro-desk-bubble .bubble-beak {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #404040;
+}
+
+.retro-desk-bubble .bubble-beak::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #c0c0c0;
+}
+
+.retro-desk-bubble .bubble-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.retro-bubble-action-btn {
+    flex: 1;
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+    box-shadow: inset 1px 1px 0px #ffffff;
+    color: #000000;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 5px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.retro-bubble-action-btn:hover {
+    background-color: #dcdcdc;
+}
+
+.retro-bubble-action-btn:active {
+    border-color: #404040 #ffffff #ffffff #404040;
+    box-shadow: inset 1px 1px 0px #808080;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
