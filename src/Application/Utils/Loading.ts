@@ -28,3 +28,5 @@ export default class Loading extends EventEmitter {
         });
     }
 }
+
+// Trigger ready event on settle
