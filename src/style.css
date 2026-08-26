@@ -243,3 +243,6 @@ body {
     padding-left: 6px;
 }
 
+
+/* Loading transition fade styling */
+#loader.fade-out { opacity: 0; pointer-events: none; }
