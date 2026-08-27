@@ -34,3 +34,5 @@ export default class Environment {
 }
 
 // Dithering enabled to eliminate banding in shadows
+
+// Shadow receiver plane integrated
