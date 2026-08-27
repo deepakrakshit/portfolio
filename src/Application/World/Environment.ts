@@ -32,3 +32,5 @@ export default class Environment {
 
     update() {}
 }
+
+// Dithering enabled to eliminate banding in shadows
