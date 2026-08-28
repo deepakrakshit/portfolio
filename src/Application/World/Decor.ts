@@ -34,3 +34,5 @@ export default class Decor {
 // Desk elevation calibrated flush with floor
 
 // Furniture materials calibrated
+
+// Ambient occlusion shadow map applied
