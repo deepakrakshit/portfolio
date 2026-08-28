@@ -36,3 +36,5 @@ export default class Decor {
 // Furniture materials calibrated
 
 // Ambient occlusion shadow map applied
+
+// Mousepad elevation offset applied
