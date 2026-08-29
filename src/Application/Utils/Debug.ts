@@ -12,3 +12,5 @@ export default class Debug {
         }
     }
 }
+
+// Debug UI guarded by production build flag
