@@ -126,3 +126,5 @@ export default class Application {
 }
 
 // Connected Sizes and Time ticker to main camera
+
+// Streamlined render loop
