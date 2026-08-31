@@ -246,3 +246,5 @@ export default class Camera extends EventEmitter {
 }
 
 // Smooth focus target interpolation added
+
+// Cubic in-out tween easing configured
