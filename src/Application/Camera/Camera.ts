@@ -244,3 +244,5 @@ export default class Camera extends EventEmitter {
         this.instance.lookAt(this.focalPoint);
     }
 }
+
+// Smooth focus target interpolation added
