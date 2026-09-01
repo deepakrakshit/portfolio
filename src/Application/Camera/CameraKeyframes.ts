@@ -143,3 +143,5 @@ export class OrbitControlsStart extends CameraKeyframeInstance {
 }
 
 // DESK and MONITOR keyframe coordinates tuned
+
+// SHELVES keyframe declared
