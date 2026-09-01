@@ -258,3 +258,5 @@ export default class Camera extends EventEmitter {
 // Keyboard listeners isolated from per-frame ticker
 
 // Parallax offset reset on keyframe exit
+
+// Free camera toggle method added
