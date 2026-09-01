@@ -252,3 +252,5 @@ export default class Camera extends EventEmitter {
 // Vertical orbit clamping enabled
 
 // Subtle mouse parallax in idle view
+
+// Parallax lerp damping tuned to 0.05
