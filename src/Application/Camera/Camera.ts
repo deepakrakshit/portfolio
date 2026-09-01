@@ -256,3 +256,5 @@ export default class Camera extends EventEmitter {
 // Parallax lerp damping tuned to 0.05
 
 // Keyboard listeners isolated from per-frame ticker
+
+// Parallax offset reset on keyframe exit
