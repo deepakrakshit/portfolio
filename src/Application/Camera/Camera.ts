@@ -250,3 +250,5 @@ export default class Camera extends EventEmitter {
 // Cubic in-out tween easing configured
 
 // Vertical orbit clamping enabled
+
+// Subtle mouse parallax in idle view
