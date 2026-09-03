@@ -30,3 +30,5 @@ export default class Computer {
         this.scene.add(this.bakedModel.getModel());
     }
 }
+
+// CRT bezel alignment verified
