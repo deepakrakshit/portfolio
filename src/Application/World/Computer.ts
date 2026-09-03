@@ -32,3 +32,5 @@ export default class Computer {
 }
 
 // CRT bezel alignment verified
+
+// Keyboard and trackball sub-mesh nodes named
