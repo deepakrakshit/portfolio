@@ -536,3 +536,5 @@ export default class MonitorScreen extends EventEmitter {
 // Video paused outside MONITOR keyframe
 
 // CSS3D iframe bounds synchronized
+
+// CSS3D plane depth write adjusted
