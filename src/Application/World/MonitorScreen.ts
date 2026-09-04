@@ -530,3 +530,5 @@ export default class MonitorScreen extends EventEmitter {
         }
     }
 }
+
+// Screen aspect ratio mapped accurately
