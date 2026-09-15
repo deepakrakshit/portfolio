@@ -538,3 +538,5 @@ export default class Audio {
         }
     }
 }
+
+// AudioContext resume on interaction gesture
