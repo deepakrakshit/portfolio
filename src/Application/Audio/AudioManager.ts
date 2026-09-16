@@ -540,3 +540,5 @@ export default class Audio {
 }
 
 // AudioContext resume on interaction gesture
+
+// Procedural oscillator sound synthesis
