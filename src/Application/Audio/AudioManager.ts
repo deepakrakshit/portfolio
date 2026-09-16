@@ -544,3 +544,5 @@ export default class Audio {
 // Procedural oscillator sound synthesis
 
 // Noise burst key click synthesis
+
+// Binder and paper rustling synthesis
