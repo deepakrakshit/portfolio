@@ -542,3 +542,5 @@ export default class Audio {
 // AudioContext resume on interaction gesture
 
 // Procedural oscillator sound synthesis
+
+// Noise burst key click synthesis
