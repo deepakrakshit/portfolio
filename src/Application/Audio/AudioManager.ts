@@ -548,3 +548,5 @@ export default class Audio {
 // Binder and paper rustling synthesis
 
 // Ambient office atmosphere playback
+
+// Exponential gain ramp envelope applied
