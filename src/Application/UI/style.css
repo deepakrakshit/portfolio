@@ -183,3 +183,7 @@ br {
         padding-bottom: 32px;
     }
 }
+
+/* Non-interactive overlay pointer pass-through */
+.ui-container { pointer-events: none; }
+.ui-interactive { pointer-events: auto; }
