@@ -937,3 +937,5 @@ export default class DeskInteractions {
 // Trackball mouse lift animation
 
 // Project binders inspection animation
+
+// Documents lift animation
