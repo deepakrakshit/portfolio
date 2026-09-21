@@ -939,3 +939,5 @@ export default class DeskInteractions {
 // Project binders inspection animation
 
 // Documents lift animation
+
+// Retro dialog bubble popup
