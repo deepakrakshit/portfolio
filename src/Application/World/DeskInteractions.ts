@@ -941,3 +941,5 @@ export default class DeskInteractions {
 // Documents lift animation
 
 // Retro dialog bubble popup
+
+// Hide bubble on MONITOR keyframe entry
