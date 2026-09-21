@@ -933,3 +933,5 @@ export default class DeskInteractions {
         }
     }
 }
+
+// Trackball mouse lift animation
