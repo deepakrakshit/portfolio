@@ -68,3 +68,5 @@ export default class CoffeeSteam {
 }
 
 // Steam blending configured
+
+// Buffer count tuned for 60 FPS
