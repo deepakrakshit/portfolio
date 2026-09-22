@@ -943,3 +943,5 @@ export default class DeskInteractions {
 // Retro dialog bubble popup
 
 // Hide bubble on MONITOR keyframe entry
+
+// Coffee cup animation and accelerated steam
