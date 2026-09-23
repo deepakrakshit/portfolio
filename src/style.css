@@ -246,3 +246,6 @@ body {
 
 /* Loading transition fade styling */
 #loader.fade-out { opacity: 0; pointer-events: none; }
+
+/* Retro comic dialog styling */
+.retro-desk-bubble { border: 3px solid #111; box-shadow: 4px 4px 0 #111; }
