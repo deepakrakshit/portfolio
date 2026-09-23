@@ -951,3 +951,5 @@ export default class DeskInteractions {
 // Screen projection coordinates mapped
 
 // Return transitions smoothed
+
+// Animation debounce guard
