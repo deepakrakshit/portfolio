@@ -949,3 +949,5 @@ export default class DeskInteractions {
 // Sound synthesis on desk interactions
 
 // Screen projection coordinates mapped
+
+// Return transitions smoothed
