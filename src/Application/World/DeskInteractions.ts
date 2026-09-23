@@ -945,3 +945,5 @@ export default class DeskInteractions {
 // Hide bubble on MONITOR keyframe entry
 
 // Coffee cup animation and accelerated steam
+
+// Sound synthesis on desk interactions
