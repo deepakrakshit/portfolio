@@ -947,3 +947,5 @@ export default class DeskInteractions {
 // Coffee cup animation and accelerated steam
 
 // Sound synthesis on desk interactions
+
+// Screen projection coordinates mapped
