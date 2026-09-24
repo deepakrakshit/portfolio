@@ -1387,3 +1387,5 @@ export default class Dog {
 // Haunches and front paws
 
 // Red collar and brass ID tag
+
+// Materials aligned with room lighting
