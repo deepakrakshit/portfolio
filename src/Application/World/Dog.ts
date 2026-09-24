@@ -1379,3 +1379,5 @@ export default class Dog {
         });
     }
 }
+
+// Bed coaster and cushion geometry initialized
