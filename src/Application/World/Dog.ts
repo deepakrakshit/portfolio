@@ -1381,3 +1381,5 @@ export default class Dog {
 }
 
 // Bed coaster and cushion geometry initialized
+
+// Torso and chest patch meshes
