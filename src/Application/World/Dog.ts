@@ -1385,3 +1385,5 @@ export default class Dog {
 // Torso and chest patch meshes
 
 // Haunches and front paws
+
+// Red collar and brass ID tag
