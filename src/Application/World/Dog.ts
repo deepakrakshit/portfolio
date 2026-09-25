@@ -1393,3 +1393,5 @@ export default class Dog {
 // Head, muzzle, and dark nose
 
 // Eyes, specular glints, and tongue
+
+// Perky ears with inner cones
