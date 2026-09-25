@@ -1391,3 +1391,5 @@ export default class Dog {
 // Materials aligned with room lighting
 
 // Head, muzzle, and dark nose
+
+// Eyes, specular glints, and tongue
