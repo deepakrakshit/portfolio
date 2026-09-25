@@ -1389,3 +1389,5 @@ export default class Dog {
 // Red collar and brass ID tag
 
 // Materials aligned with room lighting
+
+// Head, muzzle, and dark nose
