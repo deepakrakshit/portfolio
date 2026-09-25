@@ -1399,3 +1399,5 @@ export default class Dog {
 // Tail group and tip
 
 // Invisible hitMesh for raycasting
+
+// Dog cushion flush on desk
