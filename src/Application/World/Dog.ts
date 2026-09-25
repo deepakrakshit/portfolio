@@ -1397,3 +1397,5 @@ export default class Dog {
 // Perky ears with inner cones
 
 // Tail group and tip
+
+// Invisible hitMesh for raycasting
