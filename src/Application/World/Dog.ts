@@ -1407,3 +1407,5 @@ export default class Dog {
 // Continuous tail wagging
 
 // Natural eye blink interval
+
+// Bounce hop on click
