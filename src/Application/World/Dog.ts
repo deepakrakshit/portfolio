@@ -1405,3 +1405,5 @@ export default class Dog {
 // Natural idle breathing scale
 
 // Continuous tail wagging
+
+// Natural eye blink interval
