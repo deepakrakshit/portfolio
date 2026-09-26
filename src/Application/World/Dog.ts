@@ -1403,3 +1403,5 @@ export default class Dog {
 // Dog cushion flush on desk
 
 // Natural idle breathing scale
+
+// Continuous tail wagging
