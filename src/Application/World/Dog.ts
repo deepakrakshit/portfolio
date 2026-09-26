@@ -1401,3 +1401,5 @@ export default class Dog {
 // Invisible hitMesh for raycasting
 
 // Dog cushion flush on desk
+
+// Natural idle breathing scale
