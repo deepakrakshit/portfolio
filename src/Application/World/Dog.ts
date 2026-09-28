@@ -1413,3 +1413,5 @@ export default class Dog {
 // Auto-sleep delay timer
 
 // Sleeping posture tweens
+
+// Comic Zzz particle sprites
