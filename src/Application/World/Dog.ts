@@ -1417,3 +1417,5 @@ export default class Dog {
 // Comic Zzz particle sprites
 
 // Snoring breathing rhythm
+
+// Eyes closed during sleep
