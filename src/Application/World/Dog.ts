@@ -1411,3 +1411,5 @@ export default class Dog {
 // Bounce hop on click
 
 // Auto-sleep delay timer
+
+// Sleeping posture tweens
