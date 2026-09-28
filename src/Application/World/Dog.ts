@@ -1409,3 +1409,5 @@ export default class Dog {
 // Natural eye blink interval
 
 // Bounce hop on click
+
+// Auto-sleep delay timer
