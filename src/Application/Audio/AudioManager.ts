@@ -550,3 +550,5 @@ export default class Audio {
 // Ambient office atmosphere playback
 
 // Exponential gain ramp envelope applied
+
+// Dog yawn synthesized sound
