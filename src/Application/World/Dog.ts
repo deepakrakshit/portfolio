@@ -1425,3 +1425,5 @@ export default class Dog {
 // Paws stretch forward
 
 // Tongue extends during stretch
+
+// Coat shake recovery animation
