@@ -1429,3 +1429,5 @@ export default class Dog {
 // Coat shake recovery animation
 
 // Stretch unblocks click bounce
+
+// Smooth downward-dog stretch return easing
