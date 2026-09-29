@@ -1423,3 +1423,5 @@ export default class Dog {
 // Downward-dog stretch pose
 
 // Paws stretch forward
+
+// Tongue extends during stretch
