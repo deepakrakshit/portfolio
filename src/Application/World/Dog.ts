@@ -1427,3 +1427,5 @@ export default class Dog {
 // Tongue extends during stretch
 
 // Coat shake recovery animation
+
+// Stretch unblocks click bounce
