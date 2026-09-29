@@ -1421,3 +1421,5 @@ export default class Dog {
 // Eyes closed during sleep
 
 // Downward-dog stretch pose
+
+// Paws stretch forward
