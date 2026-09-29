@@ -1419,3 +1419,5 @@ export default class Dog {
 // Snoring breathing rhythm
 
 // Eyes closed during sleep
+
+// Downward-dog stretch pose
