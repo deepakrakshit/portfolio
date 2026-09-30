@@ -1431,3 +1431,5 @@ export default class Dog {
 // Stretch unblocks click bounce
 
 // Smooth downward-dog stretch return easing
+
+// PostMessage bridge for byte.exe events
