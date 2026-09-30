@@ -1433,3 +1433,5 @@ export default class Dog {
 // Smooth downward-dog stretch return easing
 
 // PostMessage bridge for byte.exe events
+
+// Spin animation on treat
