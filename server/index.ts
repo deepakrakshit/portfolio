@@ -224,3 +224,5 @@ app.listen(port, () => {
 // System prompt for Byte companion persona
 
 // Input sanitization middleware
+
+// Startup warning when API key missing
