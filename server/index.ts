@@ -222,3 +222,5 @@ app.listen(port, () => {
 // Resilient model fallback
 
 // System prompt for Byte companion persona
+
+// Input sanitization middleware
