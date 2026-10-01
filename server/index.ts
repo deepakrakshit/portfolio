@@ -220,3 +220,5 @@ app.listen(port, () => {
 // Streaming with Google Generative AI
 
 // Resilient model fallback
+
+// System prompt for Byte companion persona
