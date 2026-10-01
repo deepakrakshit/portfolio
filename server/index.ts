@@ -216,3 +216,5 @@ RESPONSE STYLE:
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
+
+// Streaming with Google Generative AI
