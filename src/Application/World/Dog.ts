@@ -1441,3 +1441,5 @@ export default class Dog {
 // Cyan glowing gradient and stroke on Zzz
 
 // Scaled up Zzz baseScale to 165
+
+// Trajectory ascends up to height 440
