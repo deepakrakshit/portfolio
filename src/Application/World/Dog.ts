@@ -1437,3 +1437,5 @@ export default class Dog {
 // Spin animation on treat
 
 // High-res 256x256 Zzz sprite canvas
+
+// Cyan glowing gradient and stroke on Zzz
