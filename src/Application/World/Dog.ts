@@ -1443,3 +1443,5 @@ export default class Dog {
 // Scaled up Zzz baseScale to 165
 
 // Trajectory ascends up to height 440
+
+// Cached Zzz textures across cycles
