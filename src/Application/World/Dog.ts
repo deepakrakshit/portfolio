@@ -1435,3 +1435,5 @@ export default class Dog {
 // PostMessage bridge for byte.exe events
 
 // Spin animation on treat
+
+// High-res 256x256 Zzz sprite canvas
