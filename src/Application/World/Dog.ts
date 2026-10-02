@@ -1445,3 +1445,5 @@ export default class Dog {
 // Trajectory ascends up to height 440
 
 // Cached Zzz textures across cycles
+
+// Snore bubble emission timing interval tuned
