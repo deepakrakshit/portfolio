@@ -1439,3 +1439,5 @@ export default class Dog {
 // High-res 256x256 Zzz sprite canvas
 
 // Cyan glowing gradient and stroke on Zzz
+
+// Scaled up Zzz baseScale to 165
