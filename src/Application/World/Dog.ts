@@ -1453,3 +1453,5 @@ export default class Dog {
 // Head yaw, pitch, and curious roll angles
 
 // Spherical interpolation head damping
+
+// Asymmetric ear cocking on look direction
