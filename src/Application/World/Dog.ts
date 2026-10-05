@@ -1449,3 +1449,5 @@ export default class Dog {
 // Snore bubble emission timing interval tuned
 
 // 3D cursor gaze ray unprojection
+
+// Head yaw, pitch, and curious roll angles
