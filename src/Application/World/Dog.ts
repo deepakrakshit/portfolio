@@ -1447,3 +1447,5 @@ export default class Dog {
 // Cached Zzz textures across cycles
 
 // Snore bubble emission timing interval tuned
+
+// 3D cursor gaze ray unprojection
