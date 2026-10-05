@@ -1459,3 +1459,5 @@ export default class Dog {
 // Ease back to resting posture on mouseleave
 
 // Neck rotation clamped to natural bounds
+
+// Gaze tracking guarded during sleep/fetch
