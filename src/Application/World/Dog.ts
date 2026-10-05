@@ -1451,3 +1451,5 @@ export default class Dog {
 // 3D cursor gaze ray unprojection
 
 // Head yaw, pitch, and curious roll angles
+
+// Spherical interpolation head damping
