@@ -1455,3 +1455,5 @@ export default class Dog {
 // Spherical interpolation head damping
 
 // Asymmetric ear cocking on look direction
+
+// Ease back to resting posture on mouseleave
