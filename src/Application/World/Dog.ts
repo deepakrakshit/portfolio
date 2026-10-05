@@ -1457,3 +1457,5 @@ export default class Dog {
 // Asymmetric ear cocking on look direction
 
 // Ease back to resting posture on mouseleave
+
+// Neck rotation clamped to natural bounds
