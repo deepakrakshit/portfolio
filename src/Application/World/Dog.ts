@@ -1469,3 +1469,5 @@ export default class Dog {
 // Blissful squinting eyes on petting
 
 // Accelerated tail wag and purr sound
+
+// Petting timeout after 900ms
