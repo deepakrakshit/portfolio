@@ -955,3 +955,5 @@ export default class DeskInteractions {
 // Animation debounce guard
 
 // Dedicated tweenGroup instantiated
+
+// Connected delta movement to handlePetStroke
