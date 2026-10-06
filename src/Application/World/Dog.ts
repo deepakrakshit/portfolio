@@ -1463,3 +1463,5 @@ export default class Dog {
 // Gaze tracking guarded during sleep/fetch
 
 // Continuous petting stroke detection
+
+// Floating hearts and sparkles sprite pool
