@@ -1467,3 +1467,5 @@ export default class Dog {
 // Floating hearts and sparkles sprite pool
 
 // Blissful squinting eyes on petting
+
+// Accelerated tail wag and purr sound
