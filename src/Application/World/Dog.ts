@@ -1461,3 +1461,5 @@ export default class Dog {
 // Neck rotation clamped to natural bounds
 
 // Gaze tracking guarded during sleep/fetch
+
+// Continuous petting stroke detection
