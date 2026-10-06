@@ -1471,3 +1471,5 @@ export default class Dog {
 // Accelerated tail wag and purr sound
 
 // Petting timeout after 900ms
+
+// Guarded startPetting during animations
