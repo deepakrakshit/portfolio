@@ -1473,3 +1473,5 @@ export default class Dog {
 // Petting timeout after 900ms
 
 // Guarded startPetting during animations
+
+// Scamper across desk and fetch toy
