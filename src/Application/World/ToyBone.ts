@@ -211,3 +211,5 @@ export default class ToyBone {
 }
 
 // Parabolic desk toss physics
+
+// Scaled up and repositioned to open desk area (-1060, -428, 980)
