@@ -957,3 +957,5 @@ export default class DeskInteractions {
 // Dedicated tweenGroup instantiated
 
 // Connected delta movement to handlePetStroke
+
+// Registered toy_bone item
