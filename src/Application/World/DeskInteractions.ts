@@ -959,3 +959,5 @@ export default class DeskInteractions {
 // Connected delta movement to handlePetStroke
 
 // Registered toy_bone item
+
+// Cleared isAnimating deadlock on fetch complete
