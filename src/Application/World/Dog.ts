@@ -1477,3 +1477,5 @@ export default class Dog {
 // Scamper across desk and fetch toy
 
 // Proud 360 spin with bone in mouth
+
+// Trot back to cushion and place toy
