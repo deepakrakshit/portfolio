@@ -1475,3 +1475,5 @@ export default class Dog {
 // Guarded startPetting during animations
 
 // Scamper across desk and fetch toy
+
+// Proud 360 spin with bone in mouth
