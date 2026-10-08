@@ -1483,3 +1483,5 @@ export default class Dog {
 // Bounce clears sleep and stretch locks
 
 // Expanded hitMesh to 380x380x360
+
+// Upgraded emoji canvas to 256x256 and baseScale to 125/105
