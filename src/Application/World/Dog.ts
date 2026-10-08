@@ -1481,3 +1481,5 @@ export default class Dog {
 // Trot back to cushion and place toy
 
 // Bounce clears sleep and stretch locks
+
+// Expanded hitMesh to 380x380x360
