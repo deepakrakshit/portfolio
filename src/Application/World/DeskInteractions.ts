@@ -933,31 +933,3 @@ export default class DeskInteractions {
         }
     }
 }
-
-// Trackball mouse lift animation
-
-// Project binders inspection animation
-
-// Documents lift animation
-
-// Retro dialog bubble popup
-
-// Hide bubble on MONITOR keyframe entry
-
-// Coffee cup animation and accelerated steam
-
-// Sound synthesis on desk interactions
-
-// Screen projection coordinates mapped
-
-// Return transitions smoothed
-
-// Animation debounce guard
-
-// Dedicated tweenGroup instantiated
-
-// Connected delta movement to handlePetStroke
-
-// Registered toy_bone item
-
-// Cleared isAnimating deadlock on fetch complete

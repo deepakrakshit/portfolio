@@ -122,7 +122,3 @@ export default class Renderer {
         }
     }
 }
-
-// Aspect ratio recalculation verified on window resize
-
-// Tuned outputColorSpace and toneMappingExposure

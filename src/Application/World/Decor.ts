@@ -30,11 +30,3 @@ export default class Decor {
         this.scene.add(this.bakedModel.getModel());
     }
 }
-
-// Desk elevation calibrated flush with floor
-
-// Furniture materials calibrated
-
-// Ambient occlusion shadow map applied
-
-// Mousepad elevation offset applied

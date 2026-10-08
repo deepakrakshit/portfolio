@@ -66,7 +66,3 @@ export default class CoffeeSteam {
         this.model.material.uniforms.uTime.value = this.time.elapsed;
     }
 }
-
-// Steam blending configured
-
-// Buffer count tuned for 60 FPS

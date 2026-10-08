@@ -89,7 +89,3 @@ export default class Resources extends EventEmitter {
         }
     }
 }
-
-// Draco compression decoding pipeline configured
-
-// Added onError event listener to LoadingManager

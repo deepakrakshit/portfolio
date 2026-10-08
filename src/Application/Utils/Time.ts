@@ -38,5 +38,3 @@ export default class Time extends EventEmitter {
         });
     }
 }
-
-// Clamped delta tracking prevents frame-drop spikes

@@ -124,7 +124,3 @@ export default class Application {
         if (this.debug.active) this.debug.ui.destroy();
     }
 }
-
-// Connected Sizes and Time ticker to main camera
-
-// Streamlined render loop

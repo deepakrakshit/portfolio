@@ -30,9 +30,3 @@ export default class Computer {
         this.scene.add(this.bakedModel.getModel());
     }
 }
-
-// CRT bezel alignment verified
-
-// Keyboard and trackball sub-mesh nodes named
-
-// Specular highlight tuned on monitor screen

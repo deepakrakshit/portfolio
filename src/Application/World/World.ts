@@ -54,5 +54,3 @@ export default class World {
         if (this.deskInteractions) this.deskInteractions.update();
     }
 }
-
-// Disabled shadow casting on static decor meshes

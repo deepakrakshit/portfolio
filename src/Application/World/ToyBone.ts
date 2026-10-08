@@ -209,7 +209,3 @@ export default class ToyBone {
         this.tweenGroup.update();
     }
 }
-
-// Parabolic desk toss physics
-
-// Scaled up and repositioned to open desk area (-1060, -428, 980)

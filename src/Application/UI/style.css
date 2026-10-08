@@ -183,9 +183,3 @@ br {
         padding-bottom: 32px;
     }
 }
-
-/* Non-interactive overlay pointer pass-through */
-.ui-container { pointer-events: none; }
-.ui-interactive { pointer-events: auto; }
-
-.ui-pill:hover { transform: translateY(-2px); }

@@ -244,19 +244,3 @@ export default class Camera extends EventEmitter {
         this.instance.lookAt(this.focalPoint);
     }
 }
-
-// Smooth focus target interpolation added
-
-// Cubic in-out tween easing configured
-
-// Vertical orbit clamping enabled
-
-// Subtle mouse parallax in idle view
-
-// Parallax lerp damping tuned to 0.05
-
-// Keyboard listeners isolated from per-frame ticker
-
-// Parallax offset reset on keyframe exit
-
-// Free camera toggle method added

@@ -216,15 +216,3 @@ RESPONSE STYLE:
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
-
-// Streaming with Google Generative AI
-
-// Resilient model fallback
-
-// System prompt for Byte companion persona
-
-// Input sanitization middleware
-
-// Startup warning when API key missing
-
-// Generation parameters tuned

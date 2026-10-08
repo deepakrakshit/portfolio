@@ -538,17 +538,3 @@ export default class Audio {
         }
     }
 }
-
-// AudioContext resume on interaction gesture
-
-// Procedural oscillator sound synthesis
-
-// Noise burst key click synthesis
-
-// Binder and paper rustling synthesis
-
-// Ambient office atmosphere playback
-
-// Exponential gain ramp envelope applied
-
-// Dog yawn synthesized sound

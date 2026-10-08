@@ -32,9 +32,3 @@ export default class Environment {
 
     update() {}
 }
-
-// Dithering enabled to eliminate banding in shadows
-
-// Shadow receiver plane integrated
-
-// Frustum culling tuned on baked environment mesh
