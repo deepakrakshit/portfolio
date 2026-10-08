@@ -1479,3 +1479,5 @@ export default class Dog {
 // Proud 360 spin with bone in mouth
 
 // Trot back to cushion and place toy
+
+// Bounce clears sleep and stretch locks
