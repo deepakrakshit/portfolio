@@ -1487,3 +1487,5 @@ export default class Dog {
 // Upgraded emoji canvas to 256x256 and baseScale to 125/105
 
 // Micro-hop +24, head lift to 218, and ear perk on hover
+
+// Sleepy squint peek during hover
