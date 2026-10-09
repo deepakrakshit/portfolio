@@ -2,7 +2,7 @@
 
 An immersive 3D developer portfolio and retro desktop operating system experience.
 
-Features an interactive 3D workstation environment rendered with Three.js, depth-occluded CSS3D CRT monitor integration, positional 3D audio, and an embedded desktop operating system (DeepakOS) showcasing Deepak Rakshit's technical background, agentic AI architectures, and full-stack software systems.
+Features an interactive 3D workstation environment rendered with Three.js, depth-occluded CSS3D CRT monitor integration, positional 3D audio, and an embedded retro Windows 95 workstation environment showcasing Deepak Rakshit's technical background, agentic AI architectures, and full-stack software systems.
 
 ---
 
@@ -10,7 +10,7 @@ Features an interactive 3D workstation environment rendered with Three.js, depth
 
 * **Outer 3D Environment:** Built with Three.js and WebGL. Features baked lighting maps, physical CRT curvature and scanline shaders, camera animation controls, and spatial Web Audio effects (keyboard typing, mouse clicks).
 * **Display Integration:** Hybrid CSS3DRenderer seamlessly blended into the 3D scene via occlusion planes, hosting the inner desktop workstation.
-* **Inner Operating System (DeepakOS):** Self-contained retro desktop environment featuring interactive window management, CLI developer terminal, project showcases (JARVIS AI, PdfORBIT SaaS, Smart India Hackathon 2026), skill matrices, and embedded document viewing (`/resume.pdf`).
+* **Inner Operating System:** Self-contained retro Windows 95 desktop environment featuring interactive window management, CLI developer terminal, project showcases (JARVIS AI, PdfORBIT SaaS, Smart India Hackathon 2026), skill matrices, and embedded document viewing (`/resume.pdf`).
 * **Bidirectional Event Bridge:** Real-time `window.postMessage` communication synchronizing cursor movement, keyboard events, and spatial audio between the inner OS and 3D camera rig.
 
 ---

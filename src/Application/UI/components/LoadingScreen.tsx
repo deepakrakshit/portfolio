@@ -5,7 +5,7 @@ type LoadingProps = {};
 
 const LoadingScreen: React.FC<LoadingProps> = () => {
     const [progress, setProgress] = useState(0);
-    const [toLoad, setToLoad] = useState(0);
+    const [toLoad, setToLoad] = useState(19);
     const [loaded, setLoaded] = useState(0);
     const [overlayOpacity, setLoadingOverlayOpacity] = useState(1);
     const [loadingTextOpacity, setLoadingTextOpacity] = useState(1);
@@ -71,8 +71,8 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                 setLoadingTextOpacity(0);
                 setTimeout(() => {
                     setStartPopupOpacity(1);
-                }, 500);
-            }, 1000);
+                }, 150);
+            }, 250);
         }
     }, [progress]);
 
@@ -147,40 +147,41 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                         className="loading-screen-header"
                     >
                         <div style={styles.logoContainer}>
-                            <div>
-                                <p style={styles.green}>
-                                    <b>Rakshit,</b>{' '}
+                            <div style={{ border: '2px solid #00aa00', padding: '2px 8px', textAlign: 'center' }}>
+                                <p style={{ color: '#00ff66', margin: 0, fontSize: '10px', letterSpacing: '1px' }}>
+                                    <b>ENERGY STAR</b>
                                 </p>
-                                <p style={styles.green}>
-                                    <b>Deepak Systems</b>
+                                <p style={{ color: '#00ff66', margin: 0, fontSize: '8px', opacity: 0.85 }}>
+                                    EPA POLLUTION PREVENTER
                                 </p>
                             </div>
                         </div>
                         <div style={styles.headerInfo}>
-                            <p>Released: 01/13/2000</p>
-                            <p>DRBIOS (C)2026 Deepak Rakshit Systems,</p>
+                            <p>Award Modular BIOS v4.51PG, An Energy Star Ally</p>
+                            <p>Copyright (C) 1984-1998, Award Software, Inc.</p>
                         </div>
                     </div>
                     <div style={styles.body} className="loading-screen-body">
-                        <p>HSP S13 2000-2026 Special UC131S</p>
+                        <p>PENTIUM(R) II MMX CPU at 450MHz</p>
                         <div style={styles.spacer} />
                         {showBiosInfo && (
                             <>
-                                <p>HSP Showcase(tm) XX 113</p>
-                                <p>Checking RAM : {14000} OK</p>
-                                <div style={styles.spacer} />
+                                <p>Memory Test : 65536K OK</p>
+                                <p>Award Plug and Play BIOS Extension v1.0A</p>
+                                <p>Detecting Primary Master   ... QUANTUM FIREBALL 8.4GB</p>
+                                <p>Detecting Secondary Master ... ATAPI CD-ROM 32X</p>
                                 <div style={styles.spacer} />
                                 {showLoadingResources ? (
-                                    progress == 1 ? (
-                                        <p>FINISHED LOADING RESOURCES</p>
+                                    progress >= 1 ? (
+                                        <p style={{ color: '#00ff66' }}>SYSTEM READY - ALL SUBSYSTEMS LOADED</p>
                                     ) : (
                                         <p className="loading">
-                                            LOADING RESOURCES ({loaded}/
-                                            {toLoad === 0 ? '-' : toLoad})
+                                            Loading Workstation Subsystems ({loaded}/
+                                            {toLoad || 19}) ...
                                         </p>
                                     )
                                 ) : (
-                                    <p className="loading">WAIT</p>
+                                    <p className="loading">Initializing hardware devices ...</p>
                                 )}
                             </>
                         )}
@@ -193,11 +194,7 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                         <div style={styles.spacer} />
                         {showLoadingResources && doneLoading && (
                             <p>
-                                All Content Loaded, launching{' '}
-                                <b style={styles.green}>
-                                    'Deepak Rakshit Portfolio Showcase'
-                                </b>{' '}
-                                V1.0
+                                System Initialized. Launching Workstation Environment ...
                             </p>
                         )}
                         <div style={styles.spacer} />
@@ -221,7 +218,12 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                 })}
             >
                 <div style={styles.startPopup}>
-                    <p>Deepak Rakshit Portfolio Showcase 2026</p>
+                    <p style={{ fontWeight: 'bold', fontSize: '16px', color: '#00ff66', marginBottom: '2px' }}>
+                        Deepak Rakshit — 3D Developer Workstation
+                    </p>
+                    <p style={{ fontSize: '13px', color: '#aaaaaa', margin: '4px 0 12px 0' }}>
+                        Interactive Three.js Experience & Retro Windows 95 Environment
+                    </p>
                     {mobileWarning && (
                         <>
                             <br />
@@ -237,7 +239,7 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                         </>
                     )}
                     <div style={{ display: 'flex', alignItems: 'flex-end' }}>
-                        <p>Click start to begin{'\xa0'}</p>
+                        <p>Click START to begin{'\xa0'}</p>
                         <span className="blinking-cursor" />
                     </div>
                     <div
@@ -347,6 +349,9 @@ const styles: StyleSheetCSS = {
     },
     headerInfo: {
         marginLeft: 64,
+    },
+    green: {
+        color: '#00ff66',
     },
     red: {
         color: '#00ff00',

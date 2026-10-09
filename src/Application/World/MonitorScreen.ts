@@ -209,7 +209,7 @@ export default class MonitorScreen extends EventEmitter {
         iframe.className = 'jitter';
         iframe.id = 'computer-screen';
         iframe.frameBorder = '0';
-        iframe.title = 'DeepakOS';
+        iframe.title = 'Windows 95 Workstation';
 
         // Add iframe to container
         container.appendChild(iframe);
@@ -321,12 +321,21 @@ export default class MonitorScreen extends EventEmitter {
     }
 
     getVideoTextures(videoId: string) {
-        const video = document.getElementById(videoId);
+        const video = document.getElementById(videoId) as HTMLVideoElement | null;
         if (!video) {
             setTimeout(() => {
                 this.getVideoTextures(videoId);
             }, 100);
         } else {
+            if (!video.src || video.src === window.location.href || video.src.endsWith('/')) {
+                if (videoId === 'video-1') {
+                    video.src = './textures/monitor/video/base-static.mp4';
+                } else if (videoId === 'video-2') {
+                    video.src = './textures/monitor/video/static-texture-layer.mp4';
+                }
+                video.load();
+                video.play().catch(() => {});
+            }
             this.videoTextures[videoId] = new THREE.VideoTexture(
                 video as HTMLVideoElement
             );
