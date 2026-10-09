@@ -195,7 +195,7 @@
     }
 
     function getBuiltInByteAnswer(rawQuery) {
-      const q = rawQuery.toLowerCase();
+      const q = (rawQuery || '').toLowerCase();
 
       // Treat & pet
       if (q.includes('treat') || q.includes('bone') || q.includes('snack') || q.includes('food') || q.includes('eat') || q.includes('pet')) {

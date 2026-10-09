@@ -29,6 +29,8 @@ async function callGoogleAI(modelName, apiKey, payload) {
     }
 }
 
+const { getBuiltInByteAnswer } = require('./byte-knowledge');
+
 module.exports = async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -49,10 +51,16 @@ module.exports = async function handler(req, res) {
     const { message, history } = req.body || {};
     const apiKey = process.env.GEMINI_API_KEY;
     const primaryModel = process.env.GEMINI_MODEL || 'gemma-4-31b-it';
-    const fallbackModel = process.env.GEMINI_FALLBACK_MODEL || 'gemini-2.5-flash';
+    const fallbackModel = process.env.GEMINI_FALLBACK_MODEL || 'gemini-3.5-flash-lite';
 
     if (!apiKey) {
-        return res.json({ fallback: true, message: 'No API key in environment' });
+        console.warn('No GEMINI_API_KEY found, using pre-defined replies of byte-companion.js');
+        return res.json({
+            reply: getBuiltInByteAnswer(message),
+            fallback: true,
+            model: 'predefined-byte-companion',
+            message: 'No API key in environment'
+        });
     }
 
     const systemPrompt = `You are Byte, Deepak Rakshit's loyal, witty, and charming AI Cyber-Canine Companion living in Deepak's 3D developer workstation portfolio and Windows 95 desktop OS.
@@ -120,7 +128,13 @@ RESPONSE STYLE:
     if (result.success) {
         return res.json({ reply: result.text, model: result.model });
     } else {
-        console.warn('Google Generative AI call failed completely:', result.error);
-        return res.json({ fallback: true, error: result.error });
+        console.warn(`Both primary (${primaryModel}) and fallback (${fallbackModel}) models failed. Using pre-defined replies of byte-companion.js.`);
+        const predefinedReply = getBuiltInByteAnswer(message);
+        return res.json({
+            reply: predefinedReply,
+            fallback: true,
+            model: 'predefined-byte-companion',
+            error: result.error
+        });
     }
 };
