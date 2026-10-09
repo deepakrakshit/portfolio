@@ -1,6 +1,12 @@
 {
-    "repository": "#",
-    "license": "UNLICENSED",
+    "name": "deepak-rakshit-portfolio",
+    "version": "1.0.0",
+    "description": "3D Interactive Developer Portfolio & DeepakOS Retro Workstation",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/deepakrakshit/portfolio.git"
+    },
+    "license": "MIT",
     "scripts": {
         "start": "node server/index.ts",
         "build": "webpack --config ./bundler/webpack.prod.js",

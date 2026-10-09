@@ -96,3 +96,10 @@ The application supports flexible runtime configuration via environment variable
 * **3D Computer Model:** Mickael Boitte
 * **3D Room Environment Assets:** Sean Nicolas
 * **Creative WebGL Inspiration:** Bruno Simon
+
+---
+
+## License
+
+This project is open-source and licensed under the [MIT License](LICENSE.md).
+
