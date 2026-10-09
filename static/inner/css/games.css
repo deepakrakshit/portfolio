@@ -1,0 +1,602 @@
+/* -------------------------------------------------------------
+       HENORDLE / WORDLE COMPONENT STYLES
+       ------------------------------------------------------------- */
+    .wordle-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      user-select: none;
+      font-family: 'MSSerif', Arial, sans-serif;
+      background: #ffffff;
+      position: relative;
+    }
+
+    .wordle-header {
+      text-align: center;
+      padding-top: 8px;
+    }
+
+    .wordle-header h2 {
+      font-size: 26px;
+      font-family: 'MillenniumBold', sans-serif;
+      margin: 0;
+      color: #000;
+    }
+
+    .wordle-header p {
+      font-size: 13px;
+      color: #555;
+      margin: 4px 0 0 0;
+      font-family: 'MSSerif', Arial, sans-serif;
+    }
+
+    .wordle-board {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 12px 0;
+    }
+
+    .wordle-row {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    .wordle-tile {
+      width: 48px;
+      height: 48px;
+      border: 2px solid #808080;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-family: 'MillenniumBold', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: #ffffff;
+      color: #000000;
+      box-sizing: border-box;
+      transition: background-color 0.15s, border-color 0.15s;
+    }
+
+    .wordle-tile.filled {
+      border-color: #000000;
+    }
+
+    .wordle-tile.correct {
+      background: #6aaa64 !important;
+      border-color: #6aaa64 !important;
+      color: #ffffff !important;
+    }
+
+    .wordle-tile.present {
+      background: #c9b458 !important;
+      border-color: #c9b458 !important;
+      color: #ffffff !important;
+    }
+
+    .wordle-tile.absent {
+      background: #787c7e !important;
+      border-color: #787c7e !important;
+      color: #ffffff !important;
+    }
+
+    .wordle-keyboard {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      width: 100%;
+      max-width: 480px;
+      padding-bottom: 8px;
+    }
+
+    .wordle-key-row {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .wordle-key {
+      min-width: 32px;
+      height: 40px;
+      padding: 0 4px;
+      border: 2px outset #ffffff;
+      background: #c0c0c0;
+      font-family: 'MSSerif', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      box-sizing: border-box;
+      color: #000;
+    }
+
+    .wordle-key:active {
+      border-style: inset;
+    }
+
+    .wordle-key.wide {
+      min-width: 52px;
+      font-size: 11px;
+    }
+
+    .wordle-key.correct {
+      background: #6aaa64 !important;
+      color: #ffffff !important;
+    }
+
+    .wordle-key.present {
+      background: #c9b458 !important;
+      color: #ffffff !important;
+    }
+
+    .wordle-key.absent {
+      background: #787c7e !important;
+      color: #ffffff !important;
+    }
+
+    @keyframes wordleShakeAnim {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+
+    .wordle-shake {
+      animation: wordleShakeAnim 0.35s ease;
+    }
+
+    .wordle-game-over-modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.96);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      box-sizing: border-box;
+      z-index: 1000;
+    }
+
+    .wordle-game-over-modal h2 {
+      font-size: 28px;
+      font-family: 'MillenniumBold', sans-serif;
+      margin: 0 0 8px 0;
+      color: #000;
+    }
+
+    .wordle-game-over-modal p {
+      font-size: 15px;
+      color: #444;
+      margin: 0;
+      font-family: 'MSSerif', Arial, sans-serif;
+    }
+
+    /* -------------------------------------------------------------
+       CREDITS COMPONENT STYLES
+       ------------------------------------------------------------- */
+    #credits-container {
+      width: 100%;
+      height: 100%;
+      background: #000000;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 32px 24px;
+      box-sizing: border-box;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+    }
+
+    .credit-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      border-bottom: 1px dotted #333333;
+      padding: 8px 0;
+    }
+
+    .credit-name {
+      font-family: 'Millennium', Arial, sans-serif;
+      font-size: 16px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .credit-role {
+      font-family: 'MSSerif', Arial, sans-serif;
+      font-size: 14px;
+      color: #aaaaaa;
+    }
+
+    /* -------------------------------------------------------------
+       MINESWEEPER 95 STYLES
+       ------------------------------------------------------------- */
+    .ms-container {
+      background: #c0c0c0;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      user-select: none;
+      box-sizing: border-box;
+      height: 100%;
+      justify-content: center;
+    }
+    .ms-border-outer {
+      border: 3px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      background: #c0c0c0;
+      padding: 6px;
+      display: inline-block;
+    }
+    .ms-header {
+      border: 3px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      padding: 4px 7px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      background: #c0c0c0;
+    }
+    .ms-led-display {
+      background: #000000;
+      color: #ff0000;
+      font-family: 'Terminal', monospace, 'Courier New';
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      padding: 1px 4px;
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      line-height: 1;
+      min-width: 48px;
+      text-align: right;
+    }
+    .ms-smiley-btn {
+      width: 32px;
+      height: 32px;
+      background: #c0c0c0;
+      border: 3px outset #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .ms-smiley-btn:active, .ms-smiley-btn.pressed {
+      border: 3px inset #ffffff;
+      background: #b5b5b5;
+    }
+    .ms-grid {
+      border: 3px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      display: grid;
+      grid-template-columns: repeat(9, 24px);
+      grid-template-rows: repeat(9, 24px);
+      background: #808080;
+      gap: 1px;
+    }
+    .ms-cell {
+      width: 24px;
+      height: 24px;
+      background: #c0c0c0;
+      border: 2px solid #ffffff;
+      border-right-color: #808080;
+      border-bottom-color: #808080;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'MillenniumBold', 'Arial Black', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+    .ms-cell.revealed {
+      border: 1px solid #808080;
+      background: #c0c0c0;
+      cursor: default;
+    }
+    .ms-cell.mine-hit {
+      background: #ff0000;
+    }
+    .ms-cell[data-val="1"] { color: #0000ff; }
+    .ms-cell[data-val="2"] { color: #008000; }
+    .ms-cell[data-val="3"] { color: #ff0000; }
+    .ms-cell[data-val="4"] { color: #000080; }
+    .ms-cell[data-val="5"] { color: #800000; }
+    .ms-cell[data-val="6"] { color: #008080; }
+    .ms-cell[data-val="7"] { color: #000000; }
+    .ms-cell[data-val="8"] { color: #808080; }
+
+    /* -------------------------------------------------------------
+       MS PAINT 95 STYLES
+       ------------------------------------------------------------- */
+    .paint-app-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: #c0c0c0;
+      user-select: none;
+      overflow: hidden;
+    }
+    .paint-menu-bar {
+      display: flex;
+      background: #c0c0c0;
+      border-bottom: 1px solid #808080;
+      padding: 2px 6px;
+      gap: 12px;
+      font-family: 'MSSerif', Arial, sans-serif;
+      font-size: 13px;
+    }
+    .paint-menu-item {
+      cursor: pointer;
+      padding: 1px 4px;
+    }
+    .paint-menu-item:hover {
+      background: #000080;
+      color: #ffffff;
+    }
+    .paint-workspace {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+      padding: 4px;
+      gap: 4px;
+      background: #c0c0c0;
+    }
+    .paint-toolbar {
+      width: 62px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .paint-tools-grid {
+      display: grid;
+      grid-template-columns: 28px 28px;
+      gap: 2px;
+      background: #c0c0c0;
+      padding: 2px;
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+    }
+    .paint-tool-btn {
+      width: 26px;
+      height: 26px;
+      background: #c0c0c0;
+      border: 2px solid #ffffff;
+      border-right-color: #808080;
+      border-bottom-color: #808080;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .paint-tool-btn.active {
+      background: #e0e0e0;
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+    }
+    .paint-size-box {
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+      background: #c0c0c0;
+    }
+    .paint-size-opt {
+      width: 44px;
+      height: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .paint-size-opt.active {
+      background: #000080;
+    }
+    .paint-size-opt .line-preview {
+      background: #000000;
+      width: 32px;
+    }
+    .paint-size-opt.active .line-preview {
+      background: #ffffff;
+    }
+    .paint-canvas-wrapper {
+      flex: 1;
+      background: #808080;
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      overflow: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 8px;
+      position: relative;
+    }
+    #paint-canvas {
+      background: #ffffff;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      cursor: crosshair;
+      image-rendering: pixelated;
+    }
+    .paint-footer {
+      display: flex;
+      align-items: center;
+      background: #c0c0c0;
+      border-top: 2px solid #ffffff;
+      padding: 4px 6px;
+      gap: 8px;
+    }
+    .paint-swatch-preview {
+      width: 32px;
+      height: 32px;
+      position: relative;
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      background: #c0c0c0;
+    }
+    .paint-fg-swatch {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border: 1px solid #000000;
+      z-index: 2;
+    }
+    .paint-bg-swatch {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      border: 1px solid #000000;
+      z-index: 1;
+    }
+    .paint-palette-grid {
+      display: grid;
+      grid-template-rows: repeat(2, 14px);
+      grid-auto-flow: column;
+      gap: 2px;
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      padding: 2px;
+      background: #c0c0c0;
+    }
+    .paint-color-box {
+      width: 14px;
+      height: 14px;
+      border: 1px solid #808080;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    /* -------------------------------------------------------------
+       TETRIS 95 STYLES
+       ------------------------------------------------------------- */
+    .tetris-container {
+      background: #c0c0c0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 10px;
+      box-sizing: border-box;
+      user-select: none;
+    }
+    .tetris-board-frame {
+      border: 3px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      background: #000000;
+      padding: 4px;
+      display: inline-block;
+    }
+    #tetris-canvas {
+      background: #000000;
+      display: block;
+      image-rendering: pixelated;
+    }
+    .tetris-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 130px;
+    }
+    .tetris-panel {
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      background: #c0c0c0;
+      padding: 6px;
+    }
+    .tetris-panel-title {
+      font-family: 'MSSerif', Arial, sans-serif;
+      font-size: 12px;
+      color: #000000;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    .tetris-panel-val {
+      background: #000000;
+      color: #00ff00;
+      font-family: 'Terminal', monospace, 'Courier New';
+      font-size: 20px;
+      font-weight: bold;
+      text-align: right;
+      padding: 2px 4px;
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+    }
+    #tetris-next-canvas {
+      background: #000000;
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+      display: block;
+      margin: 0 auto;
+    }
+    .tetris-btn-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px;
+    }
+    .tetris-btn {
+      background: #c0c0c0;
+      border: 2px solid #ffffff;
+      border-right-color: #808080;
+      border-bottom-color: #808080;
+      font-family: 'MSSerif', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 6px 2px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .tetris-btn:active {
+      border: 2px solid #808080;
+      border-right-color: #ffffff;
+      border-bottom-color: #ffffff;
+    }

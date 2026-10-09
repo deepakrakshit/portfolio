@@ -1,0 +1,215 @@
+/* -------------------------------------------------------------
+       AUTHENTIC RETRO WIN95 FONTS & TYPOGRAPHY
+       ------------------------------------------------------------- */
+    @font-face {
+      font-family: 'MSSerif';
+      src: url('./assets/fonts/MSSansSerif.ttf') format('truetype');
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Millennium';
+      src: url('./assets/fonts/Millennium.ttf') format('truetype');
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'MillenniumBold';
+      src: url('./assets/fonts/Millennium-Bold.ttf') format('truetype');
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Terminal';
+      src: url('./assets/fonts/Terminal.ttf') format('truetype');
+      font-display: swap;
+    }
+
+    :root {
+      --button-highlight: #ffffff;
+      --button-face: #747474;
+      --button-shadow: #808080;
+      --window-frame: #2b2b2b;
+      --surface: #c0c0c0;
+      --surface-hover: #e9e9e9;
+      --border-field: inset -1px -1px var(--button-highlight),
+        inset 1px 1px var(--button-shadow), inset -2px -2px var(--button-face),
+        inset 2px 2px var(--window-frame);
+      --border-raised-outer: inset -1px -1px var(--window-frame),
+        inset 1px 1px var(--button-highlight);
+      --border-raised-inner: inset -2px -2px var(--button-shadow),
+        inset 2px 2px var(--button-face);
+
+      --color-white: #FFFFFF;
+      --color-black: #000000;
+      --color-turquoise: #3e9697;
+      --color-lightGray: #c3c6ca;
+      --color-darkGray: #86898d;
+      --color-blue: #0000a3;
+      --color-darkBlue: #0000aa;
+      --color-red: #ff0000;
+    }
+
+    * {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: var(--color-turquoise);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    p {
+      font-family: Millennium, 'Times New Roman', Times, serif;
+      font-size: 18px;
+    }
+
+    p b {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+    }
+
+    .showcase-header {
+      font-family: lores-15-bold-alt-oakland, 'MS Sans Serif', sans-serif;
+      font-size: 15px;
+      color: white;
+    }
+
+    .toolbar-text {
+      font-family: lores-15-bold-alt-oakland, 'MS Sans Serif', sans-serif;
+      font-size: 18px;
+      color: black;
+    }
+
+    h1 {
+      font-family: gastromond, serif;
+      font-size: 64px;
+    }
+
+    h2 {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 32px;
+    }
+
+    h3 {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 24px;
+      letter-spacing: 0px;
+    }
+
+    h4 {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 18px;
+      letter-spacing: 0px;
+    }
+
+    li {
+      margin-bottom: 16px;
+    }
+
+    /* -------------------------------------------------------------
+       DESKTOP & SHORTCUTS
+       ------------------------------------------------------------- */
+    #desktop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 32px;
+      background-color: var(--color-turquoise);
+      overflow: hidden;
+    }
+
+    .shortcuts-column {
+      position: absolute;
+      top: 16px;
+      left: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 10;
+    }
+
+    .desktop-shortcut {
+      position: relative;
+      width: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      transform-origin: center;
+      transform: scale(1.4);
+      margin: 12px 14px;
+    }
+
+    .icon-container {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      margin-bottom: 4px;
+    }
+
+    .icon-img {
+      width: 32px;
+      height: 32px;
+      image-rendering: pixelated;
+      display: block;
+    }
+
+    .icon-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      pointer-events: none;
+      display: none;
+    }
+
+    .desktop-shortcut.selected .icon-overlay {
+      display: block;
+      background-image: linear-gradient(45deg, var(--color-blue) 25%, transparent 25%),
+        linear-gradient(-45deg, var(--color-blue) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, var(--color-blue) 75%),
+        linear-gradient(-45deg, transparent 75%, var(--color-blue) 75%);
+      background-size: 2px 2px;
+      background-position: 0 0, 0 1px, 1px -1px, -1px 0px;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
+
+    .shortcut-text-container {
+      padding: 0 2px;
+    }
+
+    .shortcut-border {
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23ea3323' stroke-width='2' stroke-dasharray='1%2c1' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+    }
+
+    .selected-shortcut-border {
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23fff' stroke-width='2' stroke-dasharray='1%2c1' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+      background-color: var(--color-blue);
+    }
+
+    .shortcut-text {
+      cursor: pointer;
+      font-family: 'MSSerif', Arial, sans-serif;
+      color: white;
+      font-size: 8px;
+      line-height: 1.1;
+      padding: 1px 2px;
+      white-space: pre-wrap;
+      word-break: normal;
+    }

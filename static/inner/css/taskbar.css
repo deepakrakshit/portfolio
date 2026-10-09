@@ -1,0 +1,241 @@
+/* -------------------------------------------------------------
+       AUTHENTIC WIN95 TOOLBAR / TASKBAR
+       ------------------------------------------------------------- */
+    #toolbar-outer {
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 32px;
+      background: var(--color-lightGray);
+      border-top: 1px solid var(--color-lightGray);
+      z-index: 100000;
+    }
+
+    #toolbar-inner {
+      border-top: 1px solid var(--color-white);
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 2px 2px 2px 3px;
+    }
+
+    #start-container-outer {
+      box-sizing: border-box;
+      cursor: pointer;
+      border: 1px solid var(--color-white);
+      border-bottom-color: var(--color-black);
+      border-right-color: var(--color-black);
+      display: flex;
+      align-items: center;
+      margin-right: 4px;
+    }
+
+    #start-container-outer.active {
+      border: 1px solid var(--color-black);
+      border-bottom-color: var(--color-white);
+      border-right-color: var(--color-white);
+    }
+
+    #start-container {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--color-lightGray);
+      border-bottom-color: var(--color-darkGray);
+      border-right-color: var(--color-darkGray);
+      padding: 2px 6px;
+      gap: 4px;
+    }
+
+    #start-container-outer.active #start-container {
+      border: 1px solid var(--color-darkGray);
+      border-bottom-color: var(--color-lightGray);
+      border-right-color: var(--color-lightGray);
+      background-image: linear-gradient(45deg, white 25%, transparent 25%),
+        linear-gradient(-45deg, white 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, white 75%),
+        linear-gradient(-45deg, transparent 75%, white 75%);
+      background-size: 4px 4px;
+      background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+    }
+
+    #start-icon {
+      width: 18px;
+      height: 18px;
+      image-rendering: pixelated;
+    }
+
+    #toolbar-tabs {
+      display: flex;
+      flex: 1;
+      margin: 0 4px;
+      gap: 4px;
+      overflow-x: auto;
+    }
+
+    .toolbar-tab-outer {
+      display: flex;
+      flex: 1;
+      max-width: 260px;
+      box-sizing: border-box;
+      cursor: pointer;
+      border: 1px solid var(--color-white);
+      border-bottom-color: var(--color-black);
+      border-right-color: var(--color-black);
+    }
+
+    .toolbar-tab-outer.active {
+      border: 1px solid var(--color-black);
+      border-bottom-color: var(--color-white);
+      border-right-color: var(--color-white);
+    }
+
+    .toolbar-tab {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--color-lightGray);
+      border-bottom-color: var(--color-darkGray);
+      border-right-color: var(--color-darkGray);
+      padding: 2px 6px;
+      flex: 1;
+      gap: 6px;
+      overflow: hidden;
+    }
+
+    .toolbar-tab-outer.active .toolbar-tab {
+      border: 1px solid var(--color-darkGray);
+      border-bottom-color: var(--color-lightGray);
+      border-right-color: var(--color-lightGray);
+      background-image: linear-gradient(45deg, white 25%, transparent 25%),
+        linear-gradient(-45deg, white 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, white 75%),
+        linear-gradient(-45deg, transparent 75%, white 75%);
+      background-size: 4px 4px;
+      background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+    }
+
+    .toolbar-tab img {
+      width: 16px;
+      height: 16px;
+      image-rendering: pixelated;
+      flex-shrink: 0;
+    }
+
+    .toolbar-tab p {
+      font-size: 14px;
+      font-family: 'MSSerif', Arial, sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #tray-clock {
+      width: 86px;
+      height: 24px;
+      box-sizing: border-box;
+      margin-right: 4px;
+      padding: 0 6px;
+      border: 1px solid var(--color-white);
+      border-top-color: var(--color-darkGray);
+      border-left-color: var(--color-darkGray);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #tray-clock img {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      image-rendering: pixelated;
+    }
+
+    #tray-clock p {
+      font-size: 12px;
+      font-family: 'MSSerif', Arial, sans-serif;
+    }
+
+    /* Start Menu Window */
+    #start-menu {
+      position: absolute;
+      bottom: 30px;
+      left: 3px;
+      width: 256px;
+      box-sizing: border-box;
+      border: 1px solid var(--color-white);
+      border-bottom-color: var(--color-black);
+      border-right-color: var(--color-black);
+      background: var(--color-lightGray);
+      display: none;
+      flex-direction: row;
+      z-index: 100001;
+    }
+
+    #start-menu-inner {
+      border: 1px solid var(--color-lightGray);
+      border-bottom-color: var(--color-darkGray);
+      border-right-color: var(--color-darkGray);
+      flex: 1;
+      display: flex;
+    }
+
+    .vertical-start-banner {
+      background: var(--color-darkGray);
+      width: 32px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 12px;
+      justify-content: center;
+    }
+
+    .vertical-start-text {
+      font-family: 'Terminal', monospace;
+      font-size: 26px;
+      color: var(--color-lightGray);
+      transform: scale(-1);
+      writing-mode: vertical-rl;
+      letter-spacing: 1px;
+    }
+
+    .start-menu-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 4px 0;
+    }
+
+    .start-menu-item {
+      display: flex;
+      align-items: center;
+      padding: 6px 12px;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .start-menu-item:hover {
+      background-color: #0000aa;
+      color: white;
+    }
+
+    .start-menu-item:hover p {
+      color: white;
+    }
+
+    .start-menu-item img {
+      width: 24px;
+      height: 24px;
+      image-rendering: pixelated;
+    }
+
+    .start-menu-item p {
+      font-family: 'MSSerif', Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .start-menu-divider {
+      height: 1px;
+      background: var(--color-white);
+      border-top: 1px solid var(--color-darkGray);
+      margin: 4px 0;
+    }

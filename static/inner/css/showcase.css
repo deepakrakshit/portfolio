@@ -1,0 +1,318 @@
+/* -------------------------------------------------------------
+       SHOWCASE APPLICATION (MATCHING image.png & SUBPAGES)
+       ------------------------------------------------------------- */
+    .site-page {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    /* Default Hero View (Pixel-for-pixel matching image.png) */
+    .showcase-home-view {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .home-header {
+      text-align: center;
+      margin-bottom: 64px;
+      margin-top: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .home-header h1 {
+      font-family: gastromond, serif;
+      font-size: 72px;
+      line-height: 0.9;
+      margin-bottom: 16px;
+      color: #000000;
+      font-weight: normal;
+    }
+
+    .home-header h2 {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 32px;
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .home-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .home-link-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 16px;
+    }
+
+    .home-link-btn h4 {
+      font-family: Millennium, 'Times New Roman', Times, serif;
+      font-size: 18px;
+      font-weight: bolder;
+      text-decoration: underline;
+      color: #0000ee;
+      cursor: pointer;
+    }
+
+    .home-link-btn:hover h4 {
+      color: #551a8b;
+    }
+
+    .home-link-btn:active h4 {
+      color: red;
+    }
+
+    /* Subpage Layout with Contained Vertical Navbar */
+    .vertical-navbar {
+      width: 230px;
+      min-width: 230px;
+      max-width: 230px;
+      height: 100%;
+      flex-direction: column;
+      padding: 32px 20px 24px 20px;
+      box-sizing: border-box;
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: flex;
+      background: #ffffff;
+      border-right: 1px solid #d4d4d4;
+      flex-shrink: 0;
+    }
+
+    .navbar-header {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
+
+    .navbar-header-text {
+      font-family: gastromond, serif;
+      font-size: 32px;
+      line-height: 1;
+      color: #000000;
+    }
+
+    .navbar-header-showcase {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 18px;
+      margin-top: 8px;
+      color: #000000;
+    }
+
+    .navbar-links {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-link-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .nav-link-item h4 {
+      font-family: Millennium, 'Times New Roman', Times, serif;
+      font-size: 17px;
+      font-weight: bolder;
+      text-decoration: underline;
+      color: #0000ee;
+    }
+
+    .nav-link-item:hover h4 {
+      color: #551a8b;
+    }
+
+    .nav-link-item.active h4 {
+      color: red;
+    }
+
+    .here-indicator {
+      width: 4px;
+      height: 4px;
+      border: 3px solid rgb(85, 26, 139);
+      border-radius: 50%;
+      margin-right: 6px;
+      align-self: center;
+    }
+
+    .inset-links {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      margin-bottom: 14px;
+      gap: 6px;
+    }
+
+    .inset-link-item h4 {
+      font-size: 15px;
+    }
+
+    /* Subpage Content Area */
+    .site-page-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+      margin-left: 0;
+      width: auto;
+      padding: 32px 36px 36px 28px;
+      overflow-y: scroll;
+      height: 100%;
+      user-select: text;
+      -webkit-user-select: text;
+      box-sizing: border-box;
+    }
+
+    /* Resume Download Banner with Authentic printer.gif */
+    .resume-container {
+      background-color: white;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 2px solid black;
+      border-left-width: 0;
+      border-right-width: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .resume-printer {
+      width: 56px;
+      height: 48px;
+      padding-right: 24px;
+      image-rendering: pixelated;
+    }
+
+    .resume-container-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .resume-container-text h3 {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 22px;
+      color: #000;
+    }
+
+    .resume-container-text a {
+      text-decoration: underline;
+      color: #0000ee;
+      cursor: pointer;
+    }
+
+    .resume-container-text a:hover {
+      color: #551a8b;
+    }
+
+    /* Reusable UI Components */
+    .text-block {
+      margin-top: 16px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+    }
+
+    .text-block p {
+      line-height: 1.5;
+    }
+
+    .big-button-container {
+      box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+      padding: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--surface-hover);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.1s;
+    }
+
+    .big-button-container:hover {
+      background-color: var(--surface);
+    }
+
+    .big-button-container:active {
+      box-shadow: var(--border-raised-inner), var(--border-raised-outer);
+    }
+
+    .site-button {
+      box-sizing: border-box;
+      background: var(--surface-hover);
+      box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+      border-radius: 0;
+      border: none;
+      color: black;
+      font-size: 18px;
+      padding: 6px 16px;
+      cursor: pointer;
+      font-family: Millennium, serif;
+      user-select: none;
+    }
+
+    .site-button:hover {
+      background-color: var(--surface);
+    }
+
+    .site-button:active {
+      background-color: var(--button-shadow);
+      box-shadow: var(--border-raised-inner), var(--border-raised-outer);
+    }
+
+    .site-button:disabled {
+      background-color: var(--button-shadow);
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 6px 10px;
+      box-sizing: border-box;
+      border: none;
+      box-shadow: var(--border-field);
+      font-family: Millennium, sans-serif;
+      font-size: 18px;
+      background: #ffffff;
+    }
+
+    textarea {
+      height: 130px;
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      background-color: #fbffc4;
+    }
