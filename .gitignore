@@ -3,6 +3,7 @@ package-lock.json
 .DS_Store
 *.psd
 public/
+single.html
 
 # Private runtime & session files (Core Rule 3)
 sessions.json

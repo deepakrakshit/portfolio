@@ -38,7 +38,8 @@ const port = process.env.PORT || 8080;
 app.use(cors());
 app.use(compression());
 
-// Have Node serve the files for our built React app
+// Have Node serve the files for our built React app and static assets
+app.use(express.static(path.resolve(__dirname, '../static')));
 app.use(express.static(path.resolve(__dirname, '../public')));
 
 // parse application/x-www-form-urlencoded

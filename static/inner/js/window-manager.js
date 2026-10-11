@@ -311,4 +311,19 @@ let topZIndex = 200;
       }
     }
 
+    // Attach click-to-focus to all windows
+    function attachWindowFocusListeners() {
+      document.querySelectorAll('.os-window').forEach(win => {
+        win.addEventListener('mousedown', () => {
+          const appKey = Object.keys(windowRegistry).find(k => windowRegistry[k].id === win.id);
+          if (appKey) focusWindow(appKey);
+        });
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', attachWindowFocusListeners);
+    } else {
+      attachWindowFocusListeners();
+    }
+
     // -----------------------------------------------------------------
