@@ -7,9 +7,6 @@ let topZIndex = 200;
       minesweeper: { id: 'win-minesweeper', tabId: 'tab-minesweeper', open: false, minimized: false },
       paint: { id: 'win-paint', tabId: 'tab-paint', open: false, minimized: false },
       tetris: { id: 'win-tetris', tabId: 'tab-tetris', open: false, minimized: false },
-      jarvis: { id: 'win-showcase', tabId: 'tab-showcase', open: true, minimized: false },
-      pdforbit: { id: 'win-showcase', tabId: 'tab-showcase', open: true, minimized: false },
-      sih: { id: 'win-showcase', tabId: 'tab-showcase', open: true, minimized: false },
     };
 
     function focusWindow(appKey) {
@@ -35,7 +32,9 @@ let topZIndex = 200;
 
       const win = document.getElementById(winData.id);
       if (win) {
-        win.style.display = 'flex';
+        if (win.style.display !== 'flex') {
+          win.style.display = 'flex';
+        }
         win.classList.remove('minimized');
       }
 
@@ -200,7 +199,13 @@ let topZIndex = 200;
 
     function scrollSection(sectionId) {
       const el = document.getElementById(sectionId);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      const container = document.getElementById('subpage-scroll-container');
+      if (el && container) {
+        const containerRect = container.getBoundingClientRect();
+        const elRect = el.getBoundingClientRect();
+        const targetScrollTop = container.scrollTop + (elRect.top - containerRect.top) - 16;
+        container.scrollTo({ top: Math.max(0, targetScrollTop), behavior: 'smooth' });
+      }
     }
 
     // 6. Start Menu Toggle
