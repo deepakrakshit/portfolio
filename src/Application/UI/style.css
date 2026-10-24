@@ -115,35 +115,99 @@ br {
     }
 }
 
-.bios-start-button {
-    background-color: #000;
-    border: 4px solid #fff;
-    border-width: 4px 3px 4px 3px;
+.crt-overlay-wrapper {
+    animation: crt-flicker 0.2s ease-out;
 }
 
-.bios-start-button p {
-    box-sizing: border-box;
-    padding: 8px;
+@keyframes crt-flicker {
+    0% {
+        opacity: 0.85;
+        filter: brightness(1.5);
+    }
+    50% {
+        opacity: 0.95;
+        filter: brightness(1.2);
+    }
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
 }
 
-.bios-start-button:hover p {
-    background-color: #fff;
-    cursor: pointer;
-    color: #000;
+.crt-scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.28) 50%,
+        rgba(0, 0, 0, 0.28)
+    );
+    background-size: 100% 4px;
+    z-index: 5;
+    opacity: 0.8;
+}
+
+.crt-vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(0, 0, 0, 0) 65%,
+        rgba(0, 0, 0, 0.65) 100%
+    );
+    z-index: 6;
+}
+
+.bios-highlight {
+    color: #00ff66 !important;
+    text-shadow: 0 0 6px rgba(0, 255, 102, 0.4);
+}
+
+.bios-dim {
+    color: #8da48d !important;
+}
+
+.bios-accent {
+    color: #66ffaa !important;
+}
+
+.retro-progress-bar {
+    font-family: monospace;
+    letter-spacing: 1.5px;
+    color: #00ff66;
+    text-shadow: 0 0 5px rgba(0, 255, 102, 0.5);
+    margin: 6px 0;
+    word-break: break-all;
 }
 
 .loading-screen-header {
     padding: 48px;
+    position: relative;
+    z-index: 2;
 }
 
 .loading-screen-body {
     padding-left: 48px;
     padding-right: 48px;
+    position: relative;
+    z-index: 2;
 }
 
 .loading-screen-footer {
     padding: 48px;
     padding-bottom: 64px;
+    position: relative;
+    z-index: 2;
 }
 
 .info-wrapper {

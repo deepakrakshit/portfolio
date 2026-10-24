@@ -32,11 +32,30 @@ export default class Audio {
 
         UIEventBus.on('loadingScreenDone', () => {
             setTimeout(() => {
-                const AudioContext =
+                const AudioContextClass =
                     // @ts-ignore
                     window.AudioContext || window.webkitAudioContext;
-                this.context = new AudioContext();
-                this.context.resume();
+                if (!this.context && AudioContextClass) {
+                    this.context = new AudioContextClass();
+                }
+                if (this.context) {
+                    this.context.resume().catch(() => {});
+                    if (this.context.state === 'suspended') {
+                        const unlockAudio = () => {
+                            if (this.context && this.context.state === 'suspended') {
+                                this.context.resume().catch(() => {});
+                            }
+                            window.removeEventListener('click', unlockAudio);
+                            window.removeEventListener('pointerdown', unlockAudio);
+                            window.removeEventListener('keydown', unlockAudio);
+                            window.removeEventListener('touchstart', unlockAudio);
+                        };
+                        window.addEventListener('click', unlockAudio, { passive: true });
+                        window.addEventListener('pointerdown', unlockAudio, { passive: true });
+                        window.addEventListener('keydown', unlockAudio, { passive: true });
+                        window.addEventListener('touchstart', unlockAudio, { passive: true });
+                    }
+                }
             }, 100);
         });
 
