@@ -685,7 +685,7 @@ export default class DeskInteractions {
     }
 
     public showBubble(item: InteractiveItem) {
-        if (!this.bubbleElement) return;
+        if (!this.bubbleElement || item.id === 'toy_bone') return;
 
         this.activeItem = item;
 
@@ -918,7 +918,11 @@ export default class DeskInteractions {
                 // Trigger audio, animation, and speech bubble
                 item.playAudio();
                 item.animate();
-                this.showBubble(item);
+                if (item.id === 'toy_bone') {
+                    this.hideBubble();
+                } else {
+                    this.showBubble(item);
+                }
             }
         } else {
             // Clicked empty space on desk/wall: smoothly hide any open dialog
