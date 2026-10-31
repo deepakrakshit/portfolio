@@ -145,7 +145,7 @@
                 <div id="showcase-home" class="showcase-home-view">
                   <div class="home-header">
                     <h1>Deepak Rakshit</h1>
-                    <h2>Software Engineer</h2>
+                    <h2>AI Engineer</h2>
                   </div>
                   <div class="home-buttons">
                     <div class="home-link-btn" onclick="navToShowcasePage('about')">
@@ -156,6 +156,9 @@
                     </div>
                     <div class="home-link-btn" onclick="navToShowcasePage('projects')">
                       <h4>PROJECTS</h4>
+                    </div>
+                    <div class="home-link-btn" onclick="navToShowcasePage('certificates')">
+                      <h4>CERTIFICATES</h4>
                     </div>
                     <div class="home-link-btn" onclick="navToShowcasePage('contact')">
                       <h4>CONTACT</h4>
@@ -193,12 +196,19 @@
                         <div class="nav-link-item inset-link-item" onclick="scrollSection('proj-jarvis')">
                           <h4>• JARVIS OS</h4>
                         </div>
+                        <div class="nav-link-item inset-link-item" onclick="scrollSection('proj-swara')">
+                          <h4>• Swara AI</h4>
+                        </div>
+                        <div class="nav-link-item inset-link-item" onclick="scrollSection('proj-skilllens')">
+                          <h4>• SkillLens</h4>
+                        </div>
                         <div class="nav-link-item inset-link-item" onclick="scrollSection('proj-pdforbit')">
                           <h4>• PdfORBIT</h4>
                         </div>
-                        <div class="nav-link-item inset-link-item" onclick="scrollSection('proj-sih')">
-                          <h4>• SIH 2026</h4>
-                        </div>
+                      </div>
+                      <div class="nav-link-item" id="nav-certificates" onclick="navToShowcasePage('certificates')">
+                        <div class="here-indicator" style="display: none;"></div>
+                        <h4>CERTIFICATES</h4>
                       </div>
                       <div class="nav-link-item" id="nav-contact" onclick="navToShowcasePage('contact')">
                         <div class="here-indicator" style="display: none;"></div>
@@ -210,53 +220,167 @@
                   <!-- Right Content Pane -->
                   <div class="site-page-content" id="subpage-scroll-container">
                     
-                    <!-- SUBPAGE: ABOUT -->
+                                                            <!-- SUBPAGE: ABOUT -->
                     <div id="page-about" style="display: none;">
-                      <h1>Welcome</h1>
-                      <h3>I'm Deepak Rakshit</h3>
-                      <br />
-                      <div class="text-block">
+                      
+                      <!-- Hero Identity Card -->
+                      <div class="about-hero-card">
+                        <div class="about-avatar-box">
+                          <img class="about-avatar-img" src="./assets/icons/myComputer.png" alt="Deepak Workstation" />
+                          <div class="about-status-led" title="System Operational & Available"></div>
+                        </div>
+                        <div class="about-hero-meta">
+                          <div class="about-hero-name">Deepak Rakshit</div>
+                          <div class="about-hero-title">AI Engineer &amp; Systems Developer</div>
+                          <div class="about-hero-tags">
+                            <span class="cert-pill" style="background:#000080;color:#ffffff;border-color:#000055;">🏛️ NIET CSE (AI Twin)</span>
+                            <span class="cert-pill">📍 Greater Noida, IN</span>
+                            <span class="cert-pill" style="background:#006600;color:#ffffff;border-color:#004400;">🟢 STATUS: ONLINE / AVAILABLE</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Retro Stats Matrix -->
+                      <div class="about-stats-grid">
+                        <div class="about-stat-box">
+                          <div class="about-stat-val">1st 🏆</div>
+                          <div class="about-stat-label">Mind to Machine</div>
+                        </div>
+                        <div class="about-stat-box">
+                          <div class="about-stat-val">Team Unit8 🎯</div>
+                          <div class="about-stat-label">SIH 2026 Nominee</div>
+                        </div>
+                        <div class="about-stat-box">
+                          <div class="about-stat-val">4x 🏅</div>
+                          <div class="about-stat-label">Hackathon Finalist</div>
+                        </div>
+                        <div class="about-stat-box">
+                          <div class="about-stat-val">100% ⚡</div>
+                          <div class="about-stat-label">Type &amp; Test Gates</div>
+                        </div>
+                      </div>
+
+                      <!-- Quick Bio Text Block -->
+                      <div class="text-block" style="margin-bottom: 20px;">
                         <p>
-                          I'm an AI Engineer Intern and Systems Developer currently building next-generation agentic AI architectures and distributed software systems.
-                          Pursuing my B.Tech in Computer Science &amp; Engineering (AI Twin) at Noida Institute of Engineering and Technology (NIET), Greater Noida.
+                          Welcome to my interactive Windows 95 portfolio environment. I engineer high-reliability, zero-hallucination agentic AI architectures, real-time audio loopback streaming, and distributed software systems.
                         </p>
                         <br />
                         <p>
-                          Thank you for taking the time to explore my interactive portfolio workstation. I designed this 3D environment to capture the vintage essence of classic computing while showcasing state-of-the-art agentic engineering, low-latency audio processing, and high-concurrency SaaS applications.
+                          Pursuing B.Tech in Computer Science &amp; Engineering (Artificial Intelligence Twin) at Noida Institute of Engineering and Technology (NIET). My engineering methodology combines rigorous behavioral verification, sovereign local inference, and deterministic tool-execution protocols.
                         </p>
                       </div>
 
                       <!-- Resume Download Widget -->
-                      <div class="resume-container">
+                      <div class="resume-container" style="margin-bottom: 24px;">
                         <img class="resume-printer" src="./assets/resume/printer.gif" alt="Printer" />
                         <div class="resume-container-text">
                           <h3>Looking for my resume?</h3>
                           <a rel="noreferrer" target="_blank" href="/resume.pdf">
-                            <p>Click here to download it!</p>
+                            <p>Click here to download the verified PDF document!</p>
                           </a>
                         </div>
                       </div>
 
-                      <div class="text-block">
-                        <h3>About Me</h3>
-                        <br />
-                        <p>
-                          From building native automation pipelines to training multimodal vision-voice loops, my engineering focus centers on zero-hallucination agentic systems, deterministic tool calling, and high-reliability software.
-                        </p>
-                        <br />
-                        <p>
-                          I specialize in full-stack TypeScript/Python development, real-time audio loopback streaming using Windows WASAPI, distributed Redis/RQ task queues, and low-level computer interaction hierarchies.
-                        </p>
-                        <br />
-                        <h3>Core Competencies</h3>
-                        <br />
-                        <p>
-                          • <b>AI &amp; Agent Systems:</b> Gemini 3.8 Live API, Tool Calling Protocols, Memory Architecture, SQLite FTS5 Hybrid Search.<br />
-                          • <b>Backend Engineering:</b> FastAPI, Python, TypeScript, Node.js, SQLAlchemy, PostgreSQL, Redis Queue, Docker.<br />
-                          • <b>Systems &amp; Audio:</b> WASAPI Loopback Capture, PBFDAF Acoustic Echo Cancellation, Win32 Automation (COM), WebRTC.<br />
-                          • <b>Engineering Standards:</b> Strict Type Safety (mypy), 100% Test Pass Gates (pytest), Zero-Hallucination Policy Firewalls.
-                        </p>
+                      <!-- Section Header: Core Competencies -->
+                      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                        <span style="font-size: 18px;">🛠️</span>
+                        <h3 style="margin: 0; font-family: MillenniumBold, 'Times New Roman', Times, serif; font-size: 20px;">Architectural Domains &amp; Competencies</h3>
                       </div>
+
+                      <!-- Core Capabilities Grid -->
+                      <div class="about-cap-grid">
+                        <div class="about-cap-card">
+                          <div class="about-cap-title-row">
+                            <span class="about-cap-icon">🤖</span>
+                            <div class="about-cap-title">Agentic AI &amp; Tool Protocols</div>
+                          </div>
+                          <p class="about-cap-desc">
+                            Specializing in autonomous agent architectures, multi-turn tool calling protocols, policy firewalls, and hybrid semantic memory indexing (SQLite FTS5 + vector).
+                          </p>
+                          <div class="cert-card-tags" style="margin-top: auto;">
+                            <span class="cert-pill">Gemini 3.8 Live</span>
+                            <span class="cert-pill">LangGraph</span>
+                            <span class="cert-pill">Tool Protocols</span>
+                            <span class="cert-pill">FTS5 Search</span>
+                          </div>
+                        </div>
+
+                        <div class="about-cap-card">
+                          <div class="about-cap-title-row">
+                            <span class="about-cap-icon">🎙️</span>
+                            <div class="about-cap-title">Systems &amp; Real-Time Audio</div>
+                          </div>
+                          <p class="about-cap-desc">
+                            Low-latency audio streaming with Windows WASAPI loopback capture, sub-band partitioned block frequency acoustic echo cancellation (PBFDAF), and Win32 COM automation.
+                          </p>
+                          <div class="cert-card-tags" style="margin-top: auto;">
+                            <span class="cert-pill">WASAPI Loopback</span>
+                            <span class="cert-pill">PBFDAF AEC</span>
+                            <span class="cert-pill">WebRTC</span>
+                            <span class="cert-pill">Win32 COM</span>
+                          </div>
+                        </div>
+
+                        <div class="about-cap-card">
+                          <div class="about-cap-title-row">
+                            <span class="about-cap-icon">⚡</span>
+                            <div class="about-cap-title">Distributed Backend &amp; SaaS</div>
+                          </div>
+                          <p class="about-cap-desc">
+                            Production async pipelines, Redis Queue worker clusters, high-concurrency FastAPI/Node.js microservices, PostgreSQL schema design, and secure payment integrations.
+                          </p>
+                          <div class="cert-card-tags" style="margin-top: auto;">
+                            <span class="cert-pill">FastAPI</span>
+                            <span class="cert-pill">Redis Queue</span>
+                            <span class="cert-pill">PostgreSQL</span>
+                            <span class="cert-pill">Docker</span>
+                          </div>
+                        </div>
+
+                        <div class="about-cap-card">
+                          <div class="about-cap-title-row">
+                            <span class="about-cap-icon">🛡️</span>
+                            <div class="about-cap-title">Sandboxing &amp; Verification</div>
+                          </div>
+                          <p class="about-cap-desc">
+                            Sovereign, air-gapped zero egress sandboxes, capability-based action broker firewalls, deterministic execution tracing, and strict 100% type safety and test pass gates.
+                          </p>
+                          <div class="cert-card-tags" style="margin-top: auto;">
+                            <span class="cert-pill">Zero Egress</span>
+                            <span class="cert-pill">Air-Gapped</span>
+                            <span class="cert-pill">100% mypy</span>
+                            <span class="cert-pill">pytest</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Windows 95 Device Manager Specs -->
+                      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                        <span style="font-size: 18px;">💻</span>
+                        <h3 style="margin: 0; font-family: MillenniumBold, 'Times New Roman', Times, serif; font-size: 20px;">System Properties &amp; Device Tree</h3>
+                      </div>
+                      <div class="about-device-manager">
+                        <div class="about-device-branch">
+                          <span>🖵</span> <span>Deepak-Workstation (x64 Windows 95 Professional Edition)</span>
+                        </div>
+                        <div class="about-device-item">
+                          ├─ 🧠 Cognitive Compute : Gemini 3.8 Live API • Qwen2.5 7B Local LLM • LangGraph Tool Pipelines
+                        </div>
+                        <div class="about-device-item">
+                          ├─ 🔊 Audio Subsystem   : WASAPI Loopback Audio Capture • PBFDAF Sub-band AEC • 16kHz PCM duplex
+                        </div>
+                        <div class="about-device-item">
+                          ├─ 💾 Storage &amp; Memory   : SQLite FTS5 Hybrid Search • PostgreSQL / SQLAlchemy • Redis Queue Cluster
+                        </div>
+                        <div class="about-device-item">
+                          ├─ 🛡️ Security Controller: Capability-Based Action Broker • Sandbox Isolation • Zero Egress
+                        </div>
+                        <div class="about-device-item">
+                          └─ ⚙️ Engineering Quality: 100% mypy Strict • 100% pytest Pass Gate • Conventional Commits
+                        </div>
+                      </div>
+
                     </div>
 
                     <!-- SUBPAGE: EXPERIENCE -->
@@ -304,6 +428,21 @@
                           <li><p>Integrated secure dual-channel communications across WhatsApp VoIP and Telegram remote control with policy firewalls.</p></li>
                         </ul>
                       </div>
+
+                      <div style="margin-top: 36px; margin-bottom: 24px;">
+                        <h1 style="font-size: 38px;">Job Simulations &amp; Credentials</h1>
+                        <h3>Practical Industry Engineering Training</h3>
+                      </div>
+                      <div class="big-button-container" onclick="navToShowcasePage('certificates')">
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                          <img src="./assets/icons/credits.png" style="width: 48px; height: 48px; image-rendering: pixelated;" alt="Certificate" />
+                          <div>
+                            <h1 style="font-size: 34px; line-height: 1.1;">Deloitte — Technology Job Simulation</h1>
+                            <h3 style="margin-top: 4px;">PRACTICAL CODING &amp; DEVELOPMENT — FORAGE (OCTOBER 2026)</h3>
+                          </div>
+                        </div>
+                        <h4 style="color: #0000ee; text-decoration: underline; white-space: nowrap;">VIEW CERTIFICATE ▶</h4>
+                      </div>
                     </div>
 
                     <!-- SUBPAGE: PROJECTS -->
@@ -312,7 +451,7 @@
                       <h3>&amp; Systems</h3>
                       <br />
                       <p>
-                        Explore some of my primary open-source systems, enterprise SaaS platforms, and hackathon innovations below.
+                        Selected open-source agentic architectures, sovereign AI systems, and platforms engineered by Deepak Rakshit.
                       </p>
                       <br />
                       <div class="resume-container">
@@ -325,55 +464,140 @@
                         </div>
                       </div>
 
-                      <!-- Project 1: JARVIS -->
+                      <!-- Project 1: JARVIS AI OS -->
                       <div class="big-button-container" id="proj-jarvis" onclick="window.open('https://github.com/deepakrakshit/jarvis-ai', '_blank')">
                         <div style="display: flex; align-items: center; gap: 20px;">
                           <img src="./assets/icons/computerBig.png" style="width: 48px; height: 48px; image-rendering: pixelated;" alt="JARVIS" />
                           <div>
-                            <h1 style="font-size: 40px;">JARVIS AI OS</h1>
-                            <h3>PERSONAL WINDOWS AI OPERATING SYSTEM</h3>
+                            <h1 style="font-size: 38px; line-height: 1.1;">JARVIS AI OS</h1>
+                            <h3 style="margin-top: 4px;">STATEFUL MULTIMODAL AI OPERATING SYSTEM FOR WINDOWS</h3>
                           </div>
                         </div>
-                        <h4 style="color: #0000ee; text-decoration: underline;">VIEW SPECS ▶</h4>
+                        <h4 style="color: #0000ee; text-decoration: underline; white-space: nowrap;">VIEW REPO ↗</h4>
                       </div>
                       <div class="text-block">
-                        <p>
-                          Autonomous agentic operating system with bidirectional live voice streaming, desktop control plane, WASAPI loopback acoustic filtering, and 169+ automated tests.
+                        <p style="font-size: 14px; color: #555; margin-bottom: 8px;">
+                          <b>Timeline:</b> Sep 2026 – Present &nbsp;|&nbsp; <b>Tech Stack:</b> Python, Gemini Live API, Node.js, TypeScript, Windows COM/UI Automation, WebRTC
                         </p>
+                        <ul>
+                          <li><p>Built a voice-and-vision AI system that controls desktop applications through a policy-enforced Action Broker, capability firewall, and post-action state verification rather than trusting model-generated actions.</p></li>
+                          <li><p>Integrated Windows UI Automation, Playwright, and a separate Node.js JSON-RPC execution engine; developed real-time WhatsApp voice calling and Telegram remote control with approval-gated sensitive actions.</p></li>
+                        </ul>
                       </div>
 
-                      <!-- Project 2: PdfORBIT -->
-                      <div class="big-button-container" id="proj-pdforbit" onclick="window.open('https://github.com/deepakrakshit/pdforbit', '_blank')">
+                      <!-- Project 2: Swara AI (SIH 2026) -->
+                      <div class="big-button-container" id="proj-swara" onclick="window.open('https://github.com/deepakrakshit/swara-ai', '_blank')">
                         <div style="display: flex; align-items: center; gap: 20px;">
-                          <img src="./assets/icons/windowExplorerIcon.png" style="width: 48px; height: 48px; image-rendering: pixelated;" alt="PdfORBIT" />
+                          <img src="./assets/icons/credits.png" style="width: 48px; height: 48px; image-rendering: pixelated;" alt="Swara AI" />
                           <div>
-                            <h1 style="font-size: 40px;">PdfORBIT</h1>
-                            <h3>HIGH-THROUGHPUT SAAS DOCUMENT PLATFORM</h3>
+                            <h1 style="font-size: 38px; line-height: 1.1;">Swara AI</h1>
+                            <h3 style="margin-top: 4px;">SOVEREIGN ON-PREMISE AGENTIC AI WORKBENCH</h3>
                           </div>
                         </div>
-                        <h4 style="color: #0000ee; text-decoration: underline;">VIEW SPECS ▶</h4>
+                        <h4 style="color: #0000ee; text-decoration: underline; white-space: nowrap;">VIEW REPO ↗</h4>
                       </div>
                       <div class="text-block">
-                        <p>
-                          Distributed asynchronous PDF engine featuring OCR pipelines, Razorpay webhook subscriptions, JWT authentication, and background Redis/RQ task workers.
+                        <p style="font-size: 14px; color: #555; margin-bottom: 8px;">
+                          <b>Timeline:</b> Aug 2026 – Sep 2026 &nbsp;|&nbsp; <b>Tech Stack:</b> Python, LangGraph, Qwen2.5, FastAPI, ChromaDB, Docker, Pytest
                         </p>
+                        <ul>
+                          <li><p>Engineered an air-gapped, zero-cloud-egress agentic workbench for industrial refinery operations using local open-weight LLMs (Qwen2.5-VL/Coder), LangGraph orchestration, and sandboxed Python code execution.</p></li>
+                          <li><p>Implemented citation-grounded RAG over engineering SOPs and P&ID diagrams, SHA-256 loop prevention, and pre-finalization human-in-the-loop gates generating dual .docx and .xlsx deliverables.</p></li>
+                        </ul>
                       </div>
 
-                      <!-- Project 3: SIH Sovereign Workbench -->
-                      <div class="big-button-container" id="proj-sih" onclick="window.open('https://github.com/deepakrakshit', '_blank')">
+                      <!-- Project 3: SkillLens -->
+                      <div class="big-button-container" id="proj-skilllens" onclick="window.open('https://github.com/deepakrakshit/skill-lens', '_blank')">
                         <div style="display: flex; align-items: center; gap: 20px;">
-                          <img src="./assets/icons/credits.png" style="width: 48px; height: 48px; image-rendering: pixelated;" alt="SIH" />
+                          <img src="./assets/icons/windowExplorerIcon.png" style="width: 48px; height: 48px; image-rendering: pixelated;" alt="SkillLens" />
                           <div>
-                            <h1 style="font-size: 40px;">SIH 2026 Workbench</h1>
-                            <h3>AIR-GAPPED SOVEREIGN INDUSTRIAL WORKBENCH</h3>
+                            <h1 style="font-size: 38px; line-height: 1.1;">SkillLens</h1>
+                            <h3 style="margin-top: 4px;">EVIDENCE-BASED CANDIDATE VERIFICATION &amp; SKILL INTELLIGENCE</h3>
                           </div>
                         </div>
-                        <h4 style="color: #0000ee; text-decoration: underline;">VIEW SPECS ▶</h4>
+                        <h4 style="color: #0000ee; text-decoration: underline; white-space: nowrap;">VIEW REPO ↗</h4>
                       </div>
                       <div class="text-block">
-                        <p>
-                          On-premise air-gapped agentic AI workbench built for confidential industrial facilities, featuring local LLM routing with zero data egress, SQLite FTS5 hybrid search, and cryptographic provenance audit logs.
+                        <p style="font-size: 14px; color: #555; margin-bottom: 8px;">
+                          <b>Timeline:</b> May 2026 &nbsp;|&nbsp; <b>Tech Stack:</b> React, TypeScript, FastAPI, Groq/Llama 3.3, GitHub REST API, FAISS/RAG
                         </p>
+                        <ul>
+                          <li><p>Developed a candidate-analysis platform that compares PDF resume claims against GitHub repository evidence and coding signals, identifying verified skills, unsupported claims, and role-specific skill gaps.</p></li>
+                          <li><p>Built evidence-scoring dashboards, personalized learning roadmaps, a multi-source RAG career mentor, and recruiter workflows for bulk resume evaluation and candidate ranking.</p></li>
+                        </ul>
+                      </div>
+
+                      <!-- Project 4: PdfORBIT -->
+                      <div class="big-button-container" id="proj-pdforbit" onclick="window.open('https://github.com/deepakrakshit', '_blank')">
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                          <img src="./assets/icons/windowGameIcon.png" style="width: 48px; height: 48px; image-rendering: pixelated;" alt="PdfORBIT" />
+                          <div>
+                            <h1 style="font-size: 38px; line-height: 1.1;">PdfORBIT</h1>
+                            <h3 style="margin-top: 4px;">PRODUCTION HIGH-THROUGHPUT SAAS DOCUMENT PLATFORM</h3>
+                          </div>
+                        </div>
+                        <h4 style="color: #0000ee; text-decoration: underline; white-space: nowrap;">VIEW REPO ↗</h4>
+                      </div>
+                      <div class="text-block">
+                        <p style="font-size: 14px; color: #555; margin-bottom: 8px;">
+                          <b>Tech Stack:</b> Python, FastAPI, Redis, Redis Queue (RQ), Tesseract OCR, Razorpay Webhooks, Docker
+                        </p>
+                        <p>
+                          Distributed asynchronous PDF transformation platform featuring OCR pipelines, Razorpay webhook subscriptions, JWT authentication, and background Redis/RQ task workers.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- SUBPAGE: CERTIFICATES -->
+                    <div id="page-certificates" style="display: none;">
+                      <h1>Certifications</h1>
+                      <h3>&amp; Credentials</h3>
+                      <br />
+                      <p>
+                        Verified professional job simulations, industry certifications, and technical credentials.
+                      </p>
+                      <br />
+
+                      <div class="resume-container">
+                        <img class="resume-printer" src="./assets/resume/printer.gif" alt="Printer" />
+                        <div class="resume-container-text">
+                          <h3>Looking for my resume?</h3>
+                          <a rel="noreferrer" target="_blank" href="/resume.pdf">
+                            <p>Click here to download it!</p>
+                          </a>
+                        </div>
+                      </div>
+
+                      <!-- Compact Credentials Grid (Scalable for multiple certificates) -->
+                      <div class="cert-grid">
+                        
+                        <!-- Certificate 1: Deloitte -->
+                        <div class="cert-card" id="cert-deloitte">
+                          <div class="cert-card-header">
+                            <div class="cert-card-thumb" onclick="window.open('/certificate.pdf', '_blank')" title="Click to view full certificate">
+                              <img src="./assets/deloitte-certificate.png" alt="Deloitte Certificate" />
+                            </div>
+                            <div class="cert-card-meta">
+                              <h4 class="cert-card-title">Deloitte — Technology Job Simulation</h4>
+                              <p class="cert-card-issuer">Deloitte &amp; Forage • October 2026</p>
+                              <p style="font-size: 13px; color: #444; margin-top: 2px;">Practical coding &amp; software development simulation</p>
+                            </div>
+                          </div>
+                          <div class="cert-card-tags">
+                            <span class="cert-pill">Software Engineering</span>
+                            <span class="cert-pill">Development</span>
+                            <span class="cert-code" title="Enrolment ID: 6addf5f2de57a23d9755aa76">ID: 6addf5f2...</span>
+                          </div>
+                          <div class="cert-card-actions">
+                            <a href="/certificate.pdf" target="_blank" class="cert-btn cert-btn-primary">
+                              📄 View PDF
+                            </a>
+                            <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6acfa5a1370ca66eb2e208f7_1792934088897_completion_certificate.pdf" target="_blank" class="cert-btn">
+                              🔗 Verify on Forage
+                            </a>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
 
@@ -845,6 +1069,10 @@
         <div class="start-menu-item" onclick="navToShowcasePage('projects'); openWindow('showcase'); toggleStartMenu();">
           <img src="./assets/icons/computerBig.png" alt="" />
           <p>Featured Projects</p>
+        </div>
+        <div class="start-menu-item" onclick="navToShowcasePage('certificates'); openWindow('showcase'); toggleStartMenu();">
+          <img src="./assets/icons/credits.png" alt="" />
+          <p>Certifications</p>
         </div>
         <div class="start-menu-item" onclick="openWindow('minesweeper'); toggleStartMenu();">
           <img src="./assets/icons/minesweeperIcon.png" alt="" />

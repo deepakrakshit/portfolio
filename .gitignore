@@ -4,6 +4,7 @@ package-lock.json
 *.psd
 public/
 single.html
+inner.html
 
 # Private runtime & session files (Core Rule 3)
 sessions.json
@@ -25,3 +26,4 @@ skills-lock.json
 secret/
 .vercel
 .env*
+.agents/

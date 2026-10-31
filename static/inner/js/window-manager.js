@@ -164,7 +164,7 @@ let topZIndex = 200;
       if (subpageView) subpageView.style.display = 'flex';
 
       // Hide all subpages
-      ['about', 'experience', 'projects', 'contact'].forEach(p => {
+      ['about', 'experience', 'projects', 'certificates', 'contact'].forEach(p => {
         const el = document.getElementById('page-' + p);
         if (el) el.style.display = 'none';
 

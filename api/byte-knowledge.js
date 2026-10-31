@@ -49,6 +49,11 @@ function getBuiltInByteAnswer(rawQuery) {
         return "🎓 **Education**:\n\nDeepak is currently pursuing his **B.Tech in Computer Science & Engineering (AI Twin)** (2nd Year) at **Noida Institute of Engineering and Technology (NIET)**, Greater Noida, India.";
     }
 
+    // Certificate & Credentials
+    if (q.includes('certificate') || q.includes('certification') || q.includes('deloitte') || q.includes('forage') || q.includes('credential')) {
+        return "🏆 **Deloitte Technology Job Simulation Certificate**:\n\nDeepak completed the practical Technology Job Simulation with **Deloitte** (via Forage) in **October 2026**, covering hands-on Coding and Software Development tasks!\n\n• **Verified PDF**: [Click here to view Certificate PDF](/certificate.pdf)\n• You can also inspect the full certificate preview inside **My Showcase > CERTIFICATES**!";
+    }
+
     // Resume
     if (q.includes('resume') || q.includes('cv')) {
         return "📄 **Deepak's Resume**:\n\nYou can view and download his complete verified resume here: [Click here to open Resume PDF](/resume.pdf)! You can also print it via the My Showcase printer icon.";

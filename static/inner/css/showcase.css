@@ -316,3 +316,339 @@
       outline: none;
       background-color: #fbffc4;
     }
+
+    /* -------------------------------------------------------------
+       COMPACT CERTIFICATES GRID & CARDS (SCALABLE ARCHITECTURE)
+       ------------------------------------------------------------- */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+      margin-bottom: 24px;
+    }
+
+    .cert-card {
+      box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+      background: var(--surface-hover);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: background 0.1s;
+      box-sizing: border-box;
+      border: none;
+    }
+
+    .cert-card:hover {
+      background-color: #ffffff;
+    }
+
+    .cert-card-header {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .cert-card-thumb {
+      width: 76px;
+      height: 54px;
+      flex-shrink: 0;
+      box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
+      background: #f0f0f0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1px solid #777;
+    }
+
+    .cert-card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cert-card-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cert-card-title {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 19px;
+      line-height: 1.2;
+      color: #000000;
+      margin: 0 0 4px 0;
+    }
+
+    .cert-card-issuer {
+      font-family: Millennium, 'Times New Roman', Times, serif;
+      font-size: 14px;
+      color: #555555;
+      margin: 0;
+    }
+
+    .cert-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .cert-pill {
+      font-family: 'MSSerif', 'MS Sans Serif', sans-serif;
+      font-size: 11px;
+      background: #e0e0e0;
+      border: 1px solid #707070;
+      box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080;
+      padding: 2px 7px;
+      color: #000000;
+      display: inline-block;
+      font-weight: normal;
+    }
+
+    .cert-code {
+      font-family: 'Terminal', monospace, monospace;
+      font-size: 11px;
+      background: #eef2ff;
+      border: 1px solid #99aacc;
+      padding: 1px 6px;
+      color: #000080;
+    }
+
+    .cert-card-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 2px;
+      flex-wrap: wrap;
+    }
+
+    .cert-btn {
+      font-family: Millennium, 'Times New Roman', Times, serif;
+      font-size: 14px;
+      padding: 4px 12px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #000000;
+      background: var(--surface-hover);
+      box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+      cursor: pointer;
+      border: none;
+      user-select: none;
+    }
+
+    .cert-btn:hover {
+      background-color: #ffffff;
+    }
+
+    .cert-btn:active {
+      box-shadow: var(--border-raised-inner), var(--border-raised-outer);
+    }
+
+    .cert-btn-primary {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      color: #0000aa;
+    }
+
+    /* -------------------------------------------------------------
+       ATTRACTIVE ABOUT PAGE COMPONENT STYLES
+       ------------------------------------------------------------- */
+    .about-hero-card {
+      border: 2px solid;
+      border-color: #ffffff #808080 #808080 #ffffff;
+      background: #c3c6ca;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      position: relative;
+      box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #000000;
+    }
+
+    .about-avatar-box {
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+      border: 2px solid;
+      border-color: #808080 #ffffff #ffffff #808080;
+      background: #000080;
+      box-shadow: inset 1px 1px 0 #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .about-avatar-img {
+      width: 48px;
+      height: 48px;
+      image-rendering: pixelated;
+    }
+
+    .about-status-led {
+      position: absolute;
+      bottom: 3px;
+      right: 3px;
+      width: 9px;
+      height: 9px;
+      background: #00ff00;
+      border: 1px solid #000000;
+      border-radius: 50%;
+      box-shadow: 0 0 5px #00ff00;
+      animation: ledPulse 1.8s infinite ease-in-out;
+    }
+
+    @keyframes ledPulse {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px #00ff00); }
+      50% { opacity: 0.45; filter: drop-shadow(0 0 1px #00ff00); }
+    }
+
+    .about-hero-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .about-hero-name {
+      font-family: gastromond, serif;
+      font-size: 38px;
+      line-height: 1.05;
+      color: #000000;
+      margin-bottom: 4px;
+    }
+
+    .about-hero-title {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 19px;
+      color: #000080;
+      margin-bottom: 8px;
+    }
+
+    .about-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .about-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .about-stat-box {
+      border: 2px solid;
+      border-color: #808080 #ffffff #ffffff #808080;
+      background: #ffffff;
+      box-shadow: inset 1px 1px 0 #000000;
+      padding: 12px 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-stat-val {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 22px;
+      color: #000080;
+      margin-bottom: 4px;
+    }
+
+    .about-stat-label {
+      font-family: 'MSSerif', 'MS Sans Serif', sans-serif;
+      font-size: 11px;
+      color: #444444;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .about-cap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+      margin-bottom: 24px;
+    }
+
+    .about-cap-card {
+      border: 2px solid;
+      border-color: #ffffff #808080 #808080 #ffffff;
+      background: #e9e9e9;
+      box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #000000;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: background 0.1s;
+    }
+
+    .about-cap-card:hover {
+      background-color: #f4f4f4;
+    }
+
+    .about-cap-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .about-cap-icon {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .about-cap-title {
+      font-family: MillenniumBold, 'Times New Roman', Times, serif;
+      font-size: 18px;
+      color: #000000;
+    }
+
+    .about-cap-desc {
+      font-family: Millennium, 'Times New Roman', Times, serif;
+      font-size: 15px;
+      line-height: 1.45;
+      color: #222222;
+      margin: 0;
+    }
+
+    .about-device-manager {
+      border: 2px solid;
+      border-color: #808080 #ffffff #ffffff #808080;
+      background: #ffffff;
+      box-shadow: inset 1px 1px 0 #000000;
+      padding: 14px 16px;
+      margin-top: 10px;
+      margin-bottom: 24px;
+      font-family: 'Terminal', monospace, monospace;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .about-device-branch {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #000080;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'MSSerif', 'MS Sans Serif', Tahoma, sans-serif;
+      font-size: 13px;
+    }
+
+    .about-device-item {
+      font-family: 'Terminal', monospace, monospace;
+      font-size: 12px;
+      color: #111111;
+      padding: 2px 0 2px 22px;
+      font-weight: normal;
+    }
