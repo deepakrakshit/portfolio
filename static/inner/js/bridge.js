@@ -1,22 +1,45 @@
-// 1. PostMessage Mouse & Keyboard Events to Parent 3D Scene
-    window.onload = () => {
-      window.addEventListener('mousemove', (event) => {
-        window.parent.postMessage({ clientX: event.clientX, clientY: event.clientY, type: 'mousemove' }, '*');
-      });
-      window.addEventListener('mousedown', (event) => {
-        window.parent.postMessage({ type: 'mousedown' }, '*');
-      });
-      window.addEventListener('mouseup', (event) => {
-        window.parent.postMessage({ type: 'mouseup' }, '*');
-      });
-      window.addEventListener('keydown', (event) => {
-        window.parent.postMessage({ type: 'keydown', key: event.key }, '*');
-      });
-      window.addEventListener('keyup', (event) => {
-        window.parent.postMessage({ type: 'keyup', key: event.key }, '*');
-      });
-    };
+// 1. PostMessage Mouse & Keyboard Events to Parent 3D Scene (Throttled & Non-Blocking)
+    window.addEventListener('DOMContentLoaded', () => {
+      let pendingMove = null;
+      let rafPending = false;
 
+      window.addEventListener('mousemove', (event) => {
+        pendingMove = { clientX: event.clientX, clientY: event.clientY, type: 'mousemove' };
+        if (!rafPending) {
+          rafPending = true;
+          requestAnimationFrame(() => {
+            if (pendingMove && window.parent && window.parent !== window) {
+              window.parent.postMessage(pendingMove, '*');
+            }
+            rafPending = false;
+          });
+        }
+      }, { passive: true });
+
+      window.addEventListener('mousedown', (event) => {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'mousedown' }, '*');
+        }
+      }, { passive: true });
+
+      window.addEventListener('mouseup', (event) => {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'mouseup' }, '*');
+        }
+      }, { passive: true });
+
+      window.addEventListener('keydown', (event) => {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'keydown', key: event.key }, '*');
+        }
+      });
+
+      window.addEventListener('keyup', (event) => {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'keyup', key: event.key }, '*');
+        }
+      });
+    });
     // 2. Real-time Clock
     function updateSystemTime() {
       const now = new Date();

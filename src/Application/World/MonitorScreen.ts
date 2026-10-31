@@ -152,7 +152,7 @@ export default class MonitorScreen extends EventEmitter {
                 window.addEventListener('message', (event) => {
                     if (!event.data || typeof event.data !== 'object') return;
                     if (!event.data.type || typeof event.data.type !== 'string') return;
-                    if (!['mousemove', 'keydown', 'keyup'].includes(event.data.type)) return;
+                    if (!['mousemove', 'mousedown', 'mouseup', 'keydown', 'keyup'].includes(event.data.type)) return;
 
                     var evt = new CustomEvent(event.data.type, {
                         bubbles: true,
@@ -183,6 +183,7 @@ export default class MonitorScreen extends EventEmitter {
                         evt.key = event.data.key;
                     }
 
+                    document.dispatchEvent(evt);
                     iframe.dispatchEvent(evt);
                 });
             }

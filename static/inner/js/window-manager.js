@@ -204,7 +204,7 @@ let topZIndex = 200;
         const containerRect = container.getBoundingClientRect();
         const elRect = el.getBoundingClientRect();
         const targetScrollTop = container.scrollTop + (elRect.top - containerRect.top) - 16;
-        container.scrollTo({ top: Math.max(0, targetScrollTop), behavior: 'smooth' });
+        container.scrollTop = Math.max(0, targetScrollTop);
       }
     }
 
@@ -332,3 +332,59 @@ let topZIndex = 200;
     }
 
     // -----------------------------------------------------------------
+
+    // ══════════════════════════════════════════════════════════════
+    // TACTILE WEB AUDIO MOUSE CLICK SOUND ENGINE
+    // Provides tactile acoustic feedback on physical mouse switches
+    // ══════════════════════════════════════════════════════════════
+    let winAudioCtx = null;
+    function getWinAudioContext() {
+      if (!winAudioCtx) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (AudioCtx) {
+          winAudioCtx = new AudioCtx();
+        }
+      }
+      if (winAudioCtx && winAudioCtx.state === 'suspended') {
+        winAudioCtx.resume().catch(() => {});
+      }
+      return winAudioCtx;
+    }
+
+    function playTactileClick(isDown) {
+      if (typeof soundMuted !== 'undefined' && soundMuted) return;
+      try {
+        const ctx = getWinAudioContext();
+        if (!ctx) return;
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const filter = ctx.createBiquadFilter();
+
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(isDown ? 2200 : 1600, now);
+        filter.Q.setValueAtTime(3.0, now);
+
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(isDown ? 1900 : 1300, now);
+        osc.frequency.exponentialRampToValueAtTime(isDown ? 200 : 250, now + (isDown ? 0.012 : 0.008));
+
+        gain.gain.setValueAtTime(isDown ? 0.16 : 0.09, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + (isDown ? 0.014 : 0.009));
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + (isDown ? 0.015 : 0.010));
+      } catch (e) {}
+    }
+
+    window.addEventListener('mousedown', function() {
+      playTactileClick(true);
+    }, { passive: true });
+
+    window.addEventListener('mouseup', function() {
+      playTactileClick(false);
+    }, { passive: true });

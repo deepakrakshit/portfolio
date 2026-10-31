@@ -184,11 +184,18 @@
       margin-left: 0;
       width: auto;
       padding: 32px 36px 36px 28px;
-      overflow-y: scroll;
+      overflow-y: auto;
       height: 100%;
       user-select: text;
       -webkit-user-select: text;
       box-sizing: border-box;
+      /* GPU Accelerated Responsive Scrolling */
+      scroll-behavior: auto !important;
+      overscroll-behavior-y: contain;
+      -webkit-overflow-scrolling: touch;
+      will-change: scroll-position;
+      transform: translateZ(0);
+      contain: paint;
     }
 
     /* Resume Download Banner with Authentic printer.gif */
@@ -501,13 +508,15 @@
       background: #00ff00;
       border: 1px solid #000000;
       border-radius: 50%;
-      box-shadow: 0 0 5px #00ff00;
-      animation: ledPulse 1.8s infinite ease-in-out;
+      box-shadow: 0 0 4px #00ff00;
+      will-change: opacity;
+      transform: translateZ(0);
+      animation: ledPulse 2s infinite ease-in-out;
     }
 
     @keyframes ledPulse {
-      0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px #00ff00); }
-      50% { opacity: 0.45; filter: drop-shadow(0 0 1px #00ff00); }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
     }
 
     .about-hero-meta {
