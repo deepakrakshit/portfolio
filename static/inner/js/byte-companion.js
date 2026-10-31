@@ -170,15 +170,16 @@ function typewriteMessage(element, text, scrollContainer) {
 async function dispatchByteResponse(userQuery) {
   if (window.location.protocol !== 'file:') {
     try {
-      const res = await fetch('/api/byte-knowledge', {
+      const res = await fetch('/api/byte-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: userQuery, history: byteChatHistory })
+        body: JSON.stringify({ message: userQuery, query: userQuery, history: byteChatHistory })
       });
       if (res.ok) {
         const data = await res.json();
-        if (data && data.answer) {
-          appendByteMessage('assistant', data.answer, true);
+        const replyText = data.reply || data.answer;
+        if (replyText) {
+          appendByteMessage('assistant', replyText, true);
           return;
         }
       }
