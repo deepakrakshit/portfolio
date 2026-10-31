@@ -975,7 +975,7 @@
           <div class="top-bar">
             <div class="window-header-box">
               <img class="window-bar-icon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' shape-rendering='crispEdges'%3E%3Crect x='4' y='6' width='6' height='12' fill='%23a4581c'/%3E%3Crect x='22' y='6' width='6' height='12' fill='%23a4581c'/%3E%3Crect x='6' y='8' width='4' height='8' fill='%23d8853b'/%3E%3Crect x='22' y='8' width='4' height='8' fill='%23d8853b'/%3E%3Crect x='8' y='8' width='16' height='14' fill='%23ce853b'/%3E%3Crect x='12' y='8' width='8' height='6' fill='%23df9b56'/%3E%3Crect x='10' y='13' width='3' height='4' fill='%2315100d'/%3E%3Crect x='19' y='13' width='3' height='4' fill='%2315100d'/%3E%3Crect x='10' y='13' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='19' y='13' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='11' y='17' width='10' height='7' fill='%23fbf1dc'/%3E%3Crect x='14' y='17' width='4' height='3' fill='%231b120c'/%3E%3Crect x='15' y='21' width='2' height='3' fill='%23eb7883'/%3E%3Crect x='9' y='25' width='14' height='3' fill='%23c43232'/%3E%3Crect x='15' y='27' width='2' height='3' fill='%23ffd700'/%3E%3C/svg%3E" alt="Byte" />
-              <p class="showcase-header">Byte.exe - AI Cyber Companion</p>
+              <p class="showcase-header">Byte.exe</p>
             </div>
             <div class="window-top-buttons">
               <div class="win-button-outer" onclick="minimizeWindow('byte')"><div class="win-button-inner"><img src="./assets/icons/minimize.png" alt="_" /></div></div>
@@ -987,35 +987,20 @@
           <div class="content-outer" style="margin: 0; flex: 1; display: flex; flex-direction: column;">
             <div class="content-inner" style="border: none; display: flex; flex-direction: column; flex: 1; padding: 6px; background: #c0c0c0; gap: 6px; box-sizing: border-box;">
               
-              <!-- Companion Hero Bar -->
-              <div class="byte-hero-bar">
-                <div class="byte-avatar-box">
-                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' shape-rendering='crispEdges'%3E%3Crect x='4' y='6' width='6' height='12' fill='%23a4581c'/%3E%3Crect x='22' y='6' width='6' height='12' fill='%23a4581c'/%3E%3Crect x='6' y='8' width='4' height='8' fill='%23d8853b'/%3E%3Crect x='22' y='8' width='4' height='8' fill='%23d8853b'/%3E%3Crect x='8' y='8' width='16' height='14' fill='%23ce853b'/%3E%3Crect x='12' y='8' width='8' height='6' fill='%23df9b56'/%3E%3Crect x='10' y='13' width='3' height='4' fill='%2315100d'/%3E%3Crect x='19' y='13' width='3' height='4' fill='%2315100d'/%3E%3Crect x='10' y='13' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='19' y='13' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='11' y='17' width='10' height='7' fill='%23fbf1dc'/%3E%3Crect x='14' y='17' width='4' height='3' fill='%231b120c'/%3E%3Crect x='15' y='21' width='2' height='3' fill='%23eb7883'/%3E%3Crect x='9' y='25' width='14' height='3' fill='%23c43232'/%3E%3Crect x='15' y='27' width='2' height='3' fill='%23ffd700'/%3E%3C/svg%3E" class="byte-avatar-img" alt="Byte Avatar" />
-                  <div class="byte-status-indicator" title="Connected to 3D Workstation Desk"></div>
-                </div>
-                <div class="byte-hero-meta">
-                  <div class="byte-hero-title-row">
-                    <span class="byte-name">BYTE v1.0</span>
-                    <span class="byte-badge byte-badge-ai">⚡ AI POWERED</span>
-                    <span class="byte-badge byte-badge-desk">DESK CONNECTED</span>
-                  </div>
-                  <p class="byte-subtitle">Deepak's Loyal Cyber-Canine Assistant &amp; Knowledge Agent</p>
-                </div>
-                <div class="byte-hero-controls">
-                  <button class="retro-btn" type="button" onclick="feedByteTreatFromApp()" title="Feed Byte a virtual dog treat!">🦴 Treat</button>
-                  <button class="retro-btn" type="button" onclick="clearByteHistory()" title="Clear chat history">🧹 Clear</button>
-                </div>
+              <!-- Clean Menu Bar -->
+              <div class="byte-menu-bar">
+                <span class="byte-menu-item" onclick="clearByteHistory()"><u>C</u>lear Chat</span>
+                <span class="byte-menu-item" onclick="askBytePrompt('Who is Deepak Rakshit?')"><u>A</u>bout Deepak</span>
               </div>
 
-              <!-- Quick Prompt Topic Chips -->
+              <!-- Quick Topic Chips -->
               <div class="byte-chips-bar">
-                <button class="byte-chip" type="button" onclick="askBytePrompt('Who is Deepak Rakshit?')">👤 Who is Deepak?</button>
-                <button class="byte-chip" type="button" onclick="askBytePrompt('Tell me about JARVIS and PdfORBIT')">🚀 JARVIS &amp; PdfORBIT</button>
-                <button class="byte-chip" type="button" onclick="askBytePrompt('What is Deepak\'s tech stack and skills?')">💻 Tech Stack</button>
-                <button class="byte-chip" type="button" onclick="askBytePrompt('Tell me about Smart India Hackathon (SIH 2026)')">🏆 SIH 2026</button>
-                <button class="byte-chip" type="button" onclick="feedByteTreatFromApp()">🦴 Treat Byte</button>
-                <button class="byte-chip" type="button" onclick="askBytePrompt('How can I contact Deepak?')">📬 Contact Info</button>
-                <button class="byte-chip" type="button" onclick="askBytePrompt('Show resume link')">📄 Resume</button>
+                <button class="byte-chip" type="button" onclick="askBytePrompt('Who is Deepak Rakshit?')">Who is Deepak?</button>
+                <button class="byte-chip" type="button" onclick="askBytePrompt('Tell me about your projects')">Projects</button>
+                <button class="byte-chip" type="button" onclick="askBytePrompt('What is your tech stack?')">Tech Stack</button>
+                <button class="byte-chip" type="button" onclick="askBytePrompt('Tell me about Smart India Hackathon')">SIH 2026</button>
+                <button class="byte-chip" type="button" onclick="askBytePrompt('Show resume')">Resume</button>
+                <button class="byte-chip" type="button" onclick="askBytePrompt('How can I contact Deepak?')">Contact</button>
               </div>
 
               <!-- Chat Stream Inset Frame -->
@@ -1025,8 +1010,9 @@
 
               <!-- Input Bar -->
               <div class="byte-input-bar">
-                <input type="text" id="byte-input" class="byte-input" placeholder="Ask Byte about Deepak's projects, skills, or say hello..." onkeydown="handleByteInputKey(event)" />
-                <button class="retro-btn byte-send-btn" type="button" onclick="sendByteMessage()">Send</button>
+                <input type="text" id="byte-input" class="byte-input" placeholder="Type a question..." onkeydown="handleByteInputKey(event)" />
+                <button class="byte-btn" type="button" onclick="sendByteMessage()">Send</button>
+                <button class="byte-btn" type="button" onclick="clearByteHistory()">Clear</button>
               </div>
 
             </div>
@@ -1034,7 +1020,7 @@
 
           <!-- Bottom Status Bar -->
           <div class="bottom-bar">
-            <div class="inset-border bottom-left-status"><p id="byte-status-text">Ready. Connected to 3D Desk Companion.</p></div>
+            <div class="inset-border bottom-left-status"><p id="byte-status-text">Ready</p></div>
             <div class="inset-border bottom-spacer"></div>
             <div class="inset-border bottom-resize-container"><img src="./assets/icons/windowResize.png" alt="" /></div>
           </div>
